@@ -2,23 +2,23 @@
 
 Vlad can install the following technologies:
 
-- [MySQL](mysql.md)
 - Apache2
-- PHP
-- Varnish
-- Git
+- Adminer
+- [Drupal Install Scripts](drupal.md)
 - [Drush](drupal.md) (with the 'site audit' and 'hacked!' modules)
-- [Munin](munin.md)
-- [Xdebug](xdebug.md)
-- Ruby (via RVM)
-- Sendmail
+- Git
+- ImageMagick
 - Mailcatcher
 - Memcached
-- Redis
-- Adminer
-- [XHProf](xhprof.md)
-- Solr (Version 4)
+- [Munin](munin.md)
+- [MySQL](mysql.md)
 - Node.js (including npm)
-- ImageMagick
+- PHP
 - PimpMyLog
-- [Drupal Install Scripts](drupal.md)
+- Redis
+- Ruby (via RVM)
+- Sendmail
+- Solr (Version 4)
+- [Varnish](varnish.md)
+- [Xdebug](xdebug.md)
+- [XHProf](xhprof.md)
