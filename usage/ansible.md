@@ -1,6 +1,6 @@
 # Ansible
 
-@TODO: Something.
+Ansible is a automation and provisioning tool that makes it easy to configure systems with the needed software, configuration options and even content. It is a command line tool, written in Python, that uses SSH connections to run these actions. This means that all you need to do is have a viable SSH connection to a machine and Ansible will run any actions you want to run. Ansible can either run single commands or use what is called a playbook to run several commands. Ansible playbooks are written in YAML, which makes understanding them quite easy.
 
 ## Running Ansible separately from Vagrant
 
