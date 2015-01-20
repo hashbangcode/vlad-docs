@@ -35,6 +35,12 @@ This is the directory that will be used to server the files from. If this doesn'
 
 default value: "./docroot"
 
+__aux_synced_folder__
+
+This is a secondary Vagrant synced folder used to sync files that don't belong in `host_synced_folder`. If this doesn't exist then it will be created.
+
+default value: "./vlad_aux"
+
 ### Install components:
 
 The server components that will be installed when the box is provisioned.

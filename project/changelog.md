@@ -4,16 +4,17 @@
 
 ### BREAKING CHANGE
 
-- Moved to using boolean values (true/false) for settings variables in place of "y"/"n" strings.
+- Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings.
     - This will break previous installations until settings files are adapted accordingly.
     
 ### Non-breaking changes
 
 - Added a docs directory, which contains ongoing documentation for the Vlad project.
 - Added multi operating system support.
-- Added CentOS support
+- Added CentOS support.
 - Added Ubuntu 14 support.
 - Fixed issues in XHProf install.
+- Path & name of vlad_aux directory on host box can now be controlled via settings.
 - Numerous minor bug fixes, formatting issues and standards updates.
 
 ## Version 0.9.0
