@@ -11,7 +11,7 @@ This includes the following technologies:
 - Varnish
 - Git
 - Drush
-- Drush extensions: Site Audit, Hacked! & Registry Rebuild
+- Drush extensions: Site Audit & Registry Rebuild
 - Munin
 - Xdebug
 - Ruby

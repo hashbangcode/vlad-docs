@@ -287,9 +287,6 @@ changed: [vlad]
 TASK: [php | Drush | download the site audit module] ************************** 
 changed: [vlad]
 
-TASK: [php | Drush | download the hacked! module] ***************************** 
-changed: [vlad]
-
 TASK: [php | Drush | download the Coder module] ******************************* 
 changed: [vlad]
 
