@@ -29,12 +29,22 @@ If Vlad finds both files it will prefer the outer settings file.
 If the directory doesn't exist when provisioning, Vlad will attempt to create it on the fly. The default value is "./docroot" which would produce a folder structure something like this:
 
 	demo-project/
-	├── vlad_aux/
 	├── vlad/
 	├── docroot/
 	├── Vagrantfile
 	└── and so on...
 	
+
+### aux_synced_folder
+
+`aux_synced_folder` is a secondary Vagrant synced folder used to sync files that don't belong in `host_synced_folder`. If the directory doesn't exist when provisioning, Vlad will attempt to create it on the fly. The default value is "./vlad_aux" which would produce a folder structure something like this:
+
+	demo-project/
+	├── vlad/
+	├── vlad_aux/
+	├── Vagrantfile
+	└── and so on...
+
 
 ### Git
 
@@ -96,13 +106,13 @@ Comparatively, this is the most compromised setup on this list. This setup shoul
 
 	demo-project/
 	├── vlad/
-	│   ├── vlad_aux/
 	│   ├── vlad/
 	│   ├── ansible.cfg
 	│   ├── Vagrantfile
 	│   ├── README.md
 	│   ├── .gitignore
 	│   └── .git/
+	├── vlad_aux/
 	├── settings/
 	│   └── vlad-settings.yml
 	└── docroot/
@@ -115,6 +125,7 @@ Comparatively, this is the most compromised setup on this list. This setup shoul
 - This setup allows for both Vlad and your Drupal codebase to exist as separate Git repos all within one wrapping project directory ("demo-project" in this example).
 - Uses Vlad's outer settings file.
 - `host_synced_folder` set to "../docroot".
+- `aux_synced_folder` set to "../vlad_aux".
 
 Because both Vlad and the Drupal codebase exist in separate repos Git can be used to handle the following fairly simply:
 
@@ -127,7 +138,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 ### Pros
 - Benefits greatly from Git without adding unnecessary complexity.
 - Does not require a complex deployment process.
-- Vlad is practically a "black box" with the exception of anything written to vlad/vlad_aux.
+- Vlad is practically a "black box" with all dynamic directories positioned outside of Vlad itself (docroot, settings & vlad_aux).
 
 
 ### Cons
@@ -144,13 +155,13 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 	├── .git/
 	├── .gitmodules
 	├── vlad/
-	│   ├── vlad_aux/
 	│   ├── vlad/
 	│   ├── ansible.cfg
 	│   ├── Vagrantfile
 	│   ├── README.md
 	│   ├── .gitignore
 	│   └── .git/
+	├── vlad_aux/
 	├── settings/
 	│   └── vlad-settings.yml
 	└── docroot/
@@ -163,6 +174,8 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 - The Drupal codebase's repo is located directly within the project's wrapping directory ("demo-project") and acts as the 'main' project repo (Vlad's repo is cloned into a Git submodule).
 - This setup has made use of Vlad's outer settings file.
 - `host_synced_folder` set to "../docroot".
+- `aux_synced_folder` set to "../vlad_aux".
+- Elements of vlad_aux/ may need to be ignored by Git (e.g. database dumps).
 
 This setup benefits greatly from Git once again with the addition that effectively everything is within the one "main" repo and even more stuff can be put into version control (e.g. Vlad's settings file and anything else you might wish to add directly within the main project directory). Vlad is treated more like a 3rd party library here via Git submodules which allow for repos to be nested in a way where the main repo isn't really aware of what's going on inside the nested repo (like a black box).
 
@@ -173,7 +186,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 - Neat, tidy, ultra portable setup via "main" project repo.
 - Vlad settings and potentially more in version control.
 - Benefits greatly from Git (excluding deployment).
-- Vlad is practically a "black box" with the exception of anything written to vlad/vlad_aux.
+- Vlad is practically a "black box" with all dynamic directories positioned outside of Vlad itself (docroot, settings & vlad_aux).
 
 
 ### Cons
@@ -203,7 +216,8 @@ Deployment via Git could be made more complex using this setup as files & direct
 
 - Uses a single Git repo (located within "docroot").
 - Uses Vlad's inner settings file.
-- `host_synced_folder` set to "./docroot".
+- `host_synced_folder` set to "./docroot" (default).
+- `aux_synced_folder` set to "./vlad_aux" (default).
 
 This setup is far simpler than the preceding examples and involves simply nesting your Drupal codebase alongside Vlad's existing file structure. Vlad's Git related files are not required and can be removed (.git, .gitignore).
 
@@ -242,7 +256,8 @@ This setup is far simpler than the preceding examples and involves simply nestin
 
 - Uses a single Git repo (located within "demo-project").
 - Uses Vlad's inner settings file.
-- `host_synced_folder` set to "./docroot".
+- `host_synced_folder` set to "./docroot" (default).
+- `aux_synced_folder` set to "./vlad_aux" (default).
 
 This is another relatively simple setup that just involves nesting your Drupal codebase alongside Vlad's existing file structure. Vlad's Git related files will need to be removed (.git, .gitignore). The .git subdirectory at demo-project/.git pertains to the Drupal codebase.
 
@@ -255,6 +270,6 @@ This is another relatively simple setup that just involves nesting your Drupal c
 
 ### Cons
 
-- Vlad would need to be excluded from Production creating a need for an alternative to `git push` for deployment.
+- vlad/ & vlad_aux/ would need to be excluded from your Production environment creating a need for an alternative to `git push` for deployment.
 - Your .gitignore file would need to be amended to ignore certain files created when using Vlad (see Vlad's .gitignore file for pointers).
 - Vlad is detached from its GitHub repo and so future updates would have to be downloaded & applied manually.
