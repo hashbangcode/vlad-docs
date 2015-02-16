@@ -291,7 +291,10 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase. Options include:
+Does not support identites that require a passphrase. 
+
+Options include:
+
 - false         : don't add anything
 - true          : add default files  (~/.ssh/id_rsa, ~/.ssh/id_dsa & ~/.ssh/identity)
 - "[filename]"  : add a specific file e.g. /Users/username/.ssh/[filename]
@@ -301,6 +304,8 @@ default value: false
 ###  Varnish Settings
 
 __varnish_memory__
+
+Sets the amount of memory that Varnish can use (in Megabytes).
 
 default value: 512
 
@@ -315,7 +320,9 @@ default value: "search_api_solr"
 __hosts_file_location__
 
 Local hosts file location.
+
 Default location on *nix hosts is '/etc/hosts'.
+
 Default location for GasMask on OSX is '/Users/< username >/Library/Gas Mask/Local/< file >.hst'.
 
 default value: "/etc/hosts"
@@ -328,7 +335,7 @@ default value: true
 
 __redis_port__
 
-Redis Port
+Sets the port Redis should listen on.
 
 default value: 6379
 
@@ -341,7 +348,10 @@ default value: ""
 
 __db_import_up__
 
-Import MySQL database from file on 'vagrant up'. Options include:
+Import MySQL database from file on 'vagrant up'. 
+
+Options include:
+
 - false          - don't import anything
 - true          - import from vlad_aux/db_io/vlad_up.sql.gz
 - "[filename]" - import from vlad_aux/db_io/[filename] (supports .sql, .bz2 and .gz files)
@@ -350,7 +360,7 @@ default value: false
 
 __add_index_file__
 
-Add the default index.php file (useful to turn off if you are going git clone into the web root folder)
+Add the default index.php file (useful to turn off if you are going git clone into the web root folder). Vlad will also not overwrite any existing index.php file present in the docroot location.
 
 default value: true
 
@@ -368,7 +378,7 @@ The OS that vlad will use. This can be one of the following:
 - "ubuntu12"
 - "ubuntu14"
 
-default value: "ubuntu12"
+default value: "ubuntu14"
 
 ### Git config user credentials
 
@@ -376,8 +386,12 @@ Leave these variales empty to skip this step.
 
 __git_user_name__
 
+Your git username.
+
 default value: ""
 
 __git_user_email__
+
+Your git email address.
 
 default value: ""
