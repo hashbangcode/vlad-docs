@@ -8,7 +8,7 @@ __webserver_hostname__
 The hostname of the site you are about to create. By default this is then combined with the variable webserver_hostname_alias to add 'www' to the start.
 
 default value: 'drupal.local'
- 
+
 __webserver_hostname_alias__
 
 This is the fully qualified name of the server.
@@ -26,7 +26,7 @@ default value: "192.168.100.100"
 __boxname__
 
 The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This will be translated to boxname + "_vlad" in said virtual box manager.
-  
+
 default value: "vlad"
 
 __host_synced_folder__
@@ -49,97 +49,97 @@ The server components that will be installed when the box is provisioned.
 
 __adminer_install__
 
-Install
+Installs Adminer.
 
 default value: true
 
 __apache_install__
 
-Install
+Installs Apache server.
 
 default value: true
 
 __imagemagick_install__
 
-Install
+Installs Imagemagick as well as the PHP extension.
 
 default value: false
 
 __mailcatcher_install__
 
-Install
+Installs Mailcatcher. Also installs the Ruby task as a dependency.
 
 default value: true
 
 __memcached_install__
-       
-Install
+
+Installs Memcache as well as the PHP extension.
 
 default value: false
 
 __munin_install__
 
-Install
+Installs Munin server.
 
 default value: false
 
 __mysql_install__
 
-Install
+Installs MySQL.
 
 default value: true
 
 __node_install__
-            
-Install
+
+Installs Node.
 
 default value: false
 
 __php_install__
-             
-Install
+
+Installs PHP, including a number of PHP packages as well as APC, Composer, and Xdebug.
 
 default value: true
 
 __pimpmylog_install__
-                   
-Install
+
+Installs PimpMyLog.
 
 default value: true
 
 __redis_install__
-               
-Install
+
+Installs Redis.
 
 default value: false
 
 __ruby_install__
-              
-Install
+
+Installs Ruby.
 
 default value: true # Ruby is required by MailCatcher
 
 __sendmail_install__
-                  
-Install
+
+Installs the Sendmail server.
 
 default value: true
 
 __solr_install__
 
-Install
+Installs Tomcat 6 and Solr 4.
 
 default value: false
 
 __varnish_install__
-                 
-Install
 
-default value: true # If you turn this off then make sure you set the http_port to be 80.
+Installs Varnish. Vlad will run checks to ensure that varnish can listen on port 80 and that Apache doesn't clash with that port.
+
+default value: true
 
 __xhprof_install__
-                
-Install
+
+Installs Xhprof and a Xhprof GUI.
 
 default value: false
 
