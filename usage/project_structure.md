@@ -14,12 +14,7 @@ Vlad has many features & settings, the following are particularly relevant to ho
 
 ### Vlad settings file location
 
-Vlad is happy for you to store your settings in one of 2 possible locations:
-
-1. "Inner" settings file: vlad/settings.yml
-2. "Outer" settings file: ../settings/vlad-settings.yml
-
-If Vlad finds both files it will prefer the outer settings file.
+See [here](settings_file.md) for details. In short, it can be placed in different locations.
 
 
 ### host_synced_folder

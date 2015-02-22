@@ -1,5 +1,6 @@
-The following variables can be set in the settings.yml file.
+# Variables
 
+The following variables can be set in Vlad's [settings file](settings_file.md).
 
 ## Webserver
 
@@ -365,6 +366,14 @@ Sets the amount of memory that Varnish can use (in Megabytes).
 
 default value: 512
 
+## Redis
+
+__redis_port__
+
+Sets the port Redis should listen on.
+
+default value: 6379
+
 ## Other settings
 
 __drupal_solr_package__
@@ -389,12 +398,6 @@ Select whether Vlad should edit the hosts file.
 
 default value: true
 
-__redis_port__
-
-Sets the port Redis should listen on.
-
-default value: 6379
-
 __db_import_up__
 
 Import MySQL database from file on 'vagrant up'. 
@@ -415,7 +418,7 @@ default value: true
 
 ## Git config user credentials
 
-Leave these variales empty to skip this step.
+Leave these variables empty to skip this step.
 
 __git_user_name__
 
