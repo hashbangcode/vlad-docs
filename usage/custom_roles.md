@@ -39,11 +39,12 @@ Below is a _basic_ example file structure for a custom role, including where it 
 demo-project/
 ├── vlad-custom/
 │   └── tasks/
-│   │   ├── main.yml
+│        └──  main.yml
 └── vlad/
 │   ├── Vagrantfile
 │   ├── vlad/
 │   └── [and so on...]
+├── settings/
 └── docroot/
 ```
 
