@@ -7,7 +7,7 @@ Future development prospects.
 A full release of the system is rapidly approaching. We are working to make Vlad more stable and more configurable.
 
 - Add multi operating system support - Done
-- Added documentation and mkdocs support - In progress
+- Add documentation and mkdocs support - In progress
 - All open bugs should be addressed - In progress
 - Add dependencies to roles so that when installing elements they require prerequisites to be installed also - In progress
 - Test with (and possibly add support for) different virtual machine systems - VMware Fusion now supported

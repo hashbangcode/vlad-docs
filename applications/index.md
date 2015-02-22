@@ -1,4 +1,4 @@
-**Vlad Installed Applications**
+# Vlad Installed Applications
 
 Vlad can install the following technologies:
 

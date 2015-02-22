@@ -1,3 +1,5 @@
+# Documentation
+
 Vlad's documentation is built using [mkdocs](http://www.mkdocs.org). 
 
 ## Installation
