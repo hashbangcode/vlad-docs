@@ -5,15 +5,15 @@
 ### BREAKING CHANGES
 
 - Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings. This will cause Ansible to fail on existing installations until settings files are adapted accordingly.
-- Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning.
+- Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning. See [Variables](../usage/variables.md#vagrantfile-configuration).
     
 ### Non-breaking changes
 
-- Added multi operating system support.
-- Added CentOS support.
-- Added Ubuntu 14 support.
+- Added multi operating system support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added CentOS support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added Ubuntu 14 support. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Fixed issues in XHProf install.
-- Path & name of vlad_aux directory on host box can now be controlled via settings.
+- Path & name of `vlad_aux` directory on host box can now be controlled via settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Custom roles no longer require a `vars/main.yml` file.
 - Numerous minor bug fixes, formatting issues and standards updates.
 

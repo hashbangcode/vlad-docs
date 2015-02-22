@@ -41,6 +41,22 @@ This is a secondary Vagrant synced folder used to sync files that don't belong i
 
 default value: "./vlad_aux"
 
+__synced_folder_type__
+
+Use 'nfs' or 'rsync' for VM file editing in synced folder.
+
+default value: 'nfs'
+
+__vlad_os__
+
+The OS that vlad will use. This can be one of the following:
+
+- "centos65"
+- "ubuntu12"
+- "ubuntu14"
+
+default value: "ubuntu14"
+
 ### Install components:
 
 The server components that will be installed when the box is provisioned.
@@ -181,7 +197,7 @@ PHP Version, can be one of "5.3" or "5.4". Vlad will error when a version that i
 
 default value: "5.4"
 
-### #php.ini settings
+### php.ini settings
 
 __php_memory_limit__
 
@@ -215,13 +231,13 @@ __php_date_timezone__
 
 default value: Europe/London
 
-### #Install PECL uploadprogress
+### Install PECL uploadprogress
 
 __php_pecl_uploadprogress__
 
 default value: true
 
-### #PHP APC Settings
+### PHP APC Settings
 
 __apc_rfc1867__
 
@@ -363,22 +379,6 @@ __add_index_file__
 Add the default index.php file (useful to turn off if you are going git clone into the web root folder). Vlad will also not overwrite any existing index.php file present in the docroot location.
 
 default value: true
-
-__synced_folder_type__
-
-Use 'nfs' or 'rsync' for VM file editing in synced folder
-
-default value: 'nfs'
-
-__vlad_os__
-
-The OS that vlad will use. This can be one of the following:
-
-- "centos65"
-- "ubuntu12"
-- "ubuntu14"
-
-default value: "ubuntu14"
 
 ### Git config user credentials
 
