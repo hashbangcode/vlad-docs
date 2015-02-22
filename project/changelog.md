@@ -2,19 +2,19 @@
 
 ## Version 0.10.0
 
-### BREAKING CHANGE
+### BREAKING CHANGES
 
-- Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings.
-    - This will break previous installations until settings files are adapted accordingly.
+- Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings. This will cause Ansible to fail on existing installations until settings files are adapted accordingly.
+- Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning.
     
 ### Non-breaking changes
 
-- Added a docs directory, which contains ongoing documentation for the Vlad project.
 - Added multi operating system support.
 - Added CentOS support.
 - Added Ubuntu 14 support.
 - Fixed issues in XHProf install.
 - Path & name of vlad_aux directory on host box can now be controlled via settings.
+- Custom roles no longer require a `vars/main.yml` file.
 - Numerous minor bug fixes, formatting issues and standards updates.
 
 ## Version 0.9.0
