@@ -213,9 +213,16 @@ default value: 'test@example.com'
 
 __php_version__
 
-PHP Version, can be one of "5.3" or "5.4". Vlad will error when a version that isn't understood is used
+The version of PHP to install (dependent on OS). Can be one of:
 
-default value: "5.4"
+- "5.3"
+- "5.4"
+- "5.5"
+- "5.6"
+
+Note that Ubuntu 14 won't install < PHP5.4 so you'll get PHP5.5+. Vlad will error when a version that isn't understood is used.
+
+default value: "5.5"
 
 ### php.ini
 
@@ -307,9 +314,17 @@ __mysql_max_allowed_packet__
 
 default value: 128M
 
+__innodb_buffer_pool_size__
+
+default value: 64M
+
 __innodb_file_per_table__
 
-default value: innodb_file_per_table
+default value: true
+
+__innodb_log_file_size__
+
+default value: 64M
 
 __mysql_character_set_server__
 
@@ -318,6 +333,10 @@ default value: utf8
 __mysql_collation_server__
 
 default value: utf8_general_ci
+
+__skip_name_resolve__
+
+default value: true
 
 ##  SSH
 
