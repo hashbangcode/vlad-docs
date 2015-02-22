@@ -1,7 +1,7 @@
 The following variables can be set in the settings.yml file.
 
 
-### Webserver settings
+## Webserver
 
 __webserver_hostname__
 
@@ -15,7 +15,7 @@ This is the fully qualified name of the server.
 
 default value: 'www.{{ webserver_hostname }}'
 
-### Vagrantfile configuration
+## Vagrantfile configuration
 
 __boxipaddress__
 
@@ -28,6 +28,16 @@ __boxname__
 The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This will be translated to boxname + "_vlad" in said virtual box manager.
 
 default value: "vlad"
+
+__vlad_os__
+
+The OS that vlad will use. This can be one of the following:
+
+- "centos65"
+- "ubuntu12"
+- "ubuntu14"
+
+default value: "ubuntu14"
 
 __host_synced_folder__
 
@@ -47,19 +57,29 @@ Use 'nfs' or 'rsync' for VM file editing in synced folder.
 
 default value: 'nfs'
 
-__vlad_os__
+__ansible_verbosity__
 
-The OS that vlad will use. This can be one of the following:
+Set the level of verbosity that Ansible will use.
+This can be one of "", "v", "vv", "vvv", or "vvvv".
 
-- "centos65"
-- "ubuntu12"
-- "ubuntu14"
+default value: ""
 
-default value: "ubuntu14"
+__vm_cpus__
 
-### Install components:
+Number of CPU cores to be allocated to the guest VM from the host machine. This can be an integer or can be set to `"auto"` for Vlad to automatically assign all available cores.
+
+default value: '2'
+
+__vm_memory__
+
+Amount of memory to be allocated to the guest VM from the host machine. This can be an integer (MB) or can be set to `"auto"` for Vlad to automatically assign 1/4 of host machine's memory.
+
+default value: '1024'
+
+## Components to install
 
 The server components that will be installed when the box is provisioned.
+
 - To install a component set it to true.
 - To leave a component out of the install set the value to false.
 
@@ -159,15 +179,15 @@ Installs Xhprof and a Xhprof GUI.
 
 default value: false
 
-### Provision with custom role
+## Provision with custom role
 
 __custom_provision__
 
-Run custom roles. See the [custom roles](../usage/custom_roles.md) section for more information.
+Run a custom role as part of provisioning. See [Custom roles](../usage/custom_roles.md) for more information.
 
 default value: false
 
-### General HTTP Port Variables
+## HTTP ports
 
 __http_port__
 
@@ -181,7 +201,7 @@ HTTP port for the Varnish cache.
 
 default value: 80
 
-### Administration email
+## Administration email
 
 __admin_mail__
 
@@ -189,7 +209,7 @@ Used in instances when a server email is needed.
 
 default value: 'test@example.com'
 
-### PHP Settings
+## PHP
 
 __php_version__
 
@@ -197,7 +217,7 @@ PHP Version, can be one of "5.3" or "5.4". Vlad will error when a version that i
 
 default value: "5.4"
 
-### php.ini settings
+### php.ini
 
 __php_memory_limit__
 
@@ -237,7 +257,7 @@ __php_pecl_uploadprogress__
 
 default value: true
 
-### PHP APC Settings
+### PHP APC
 
 __apc_rfc1867__
 
@@ -255,7 +275,8 @@ __apc_num_files_hint__
 
 default value: '0'
 
-###  MySQL Settings
+##  MySQL
+
 __mysql_port__
 
 default value: 3306
@@ -280,7 +301,7 @@ __dbpass__
 
 default value: wibble
 
-### # MySQL my.cnf settings
+### MySQL my.cnf
 
 __mysql_max_allowed_packet__
 
@@ -298,7 +319,7 @@ __mysql_collation_server__
 
 default value: utf8_general_ci
 
-###  SSH Settings
+##  SSH
 
 __ssh_port__
 
@@ -317,7 +338,7 @@ Options include:
 
 default value: false
 
-###  Varnish Settings
+##  Varnish
 
 __varnish_memory__
 
@@ -325,7 +346,7 @@ Sets the amount of memory that Varnish can use (in Megabytes).
 
 default value: 512
 
-### Other Settings
+## Other settings
 
 __drupal_solr_package__
 
@@ -355,13 +376,6 @@ Sets the port Redis should listen on.
 
 default value: 6379
 
-__ansible_verbosity__
-
-Set the level of verbosity that Ansible will use.
-This can be one of "", "v", "vv", "vvv", or "vvvv".
-
-default value: ""
-
 __db_import_up__
 
 Import MySQL database from file on 'vagrant up'. 
@@ -380,7 +394,7 @@ Add the default index.php file (useful to turn off if you are going git clone in
 
 default value: true
 
-### Git config user credentials
+## Git config user credentials
 
 Leave these variales empty to skip this step.
 
