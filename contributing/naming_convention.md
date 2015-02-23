@@ -1,4 +1,4 @@
-# Task naming convention
+<h1>Task naming convention</h1>
 
 To keep things consistent we need to have a standard way of naming tasks within the system. Each task should have a name attribute that should describe what it is that the task is doing in simple terms. 
 

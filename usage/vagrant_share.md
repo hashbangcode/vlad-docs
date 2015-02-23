@@ -1,4 +1,4 @@
-# VAGRANT SHARE!!!
+<h1>VAGRANT SHARE!!!</h1>
 
 Vlad supports sharing of your virtual machine using the `vagrant share` command. To use this feature you first need to create a free HashiCorp [Atlas](https://atlas.hashicorp.com/) account. Once done you can login to this service by typing the following command within the vlad directory.
 

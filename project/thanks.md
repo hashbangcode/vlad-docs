@@ -1,4 +1,4 @@
-# Thanks
+<h1>Thanks</h1>
 
 - Thanks to [Mike Bell](http://mikebell.io/) for some of the Vagrant configuration settings.
 - Thanks to [Michael Heap](http://michaelheap.com/) for introducing me to Ansible.

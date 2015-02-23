@@ -1,4 +1,4 @@
-# Variables
+<h1>Variables</h1>
 
 The following variables can be set in Vlad's [settings file](settings_file.md).
 

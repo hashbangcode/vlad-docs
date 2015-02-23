@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+<h1>Frequently Asked Questions</h1>
 
 ## Can I use the Ansible playbooks in Vlad on my production server?
 

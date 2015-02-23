@@ -1,4 +1,4 @@
-# Installing Drupal
+<h1>Installing Drupal</h1>
 
 Different versions of Drupal can be installed by scripts that are available on the box.
 
@@ -13,7 +13,7 @@ Password: password
 
 NOTE: Both of these scripts will remove anything already in the /var/www/sites/docroot directory (or whatever name you have selected for it) so be careful.
 
-# Drush
+## Drush
 
 Vlad comes with both Drush 6 (current) and Drush 7 (dev) versions. This means you can run Drush commands against a Drupal 8 install.
 

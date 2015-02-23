@@ -1,4 +1,4 @@
-# Settings file
+<h1>Settings file</h1>
 
 Variables can be set in Vlad's settings file to alter how you'd like your VM to be configured. See [here](variables.md) for a full list of available variables.
 

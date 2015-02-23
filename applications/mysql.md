@@ -1,4 +1,4 @@
-# Setting up local MySQL applications
+<h1>Setting up local MySQL applications</h1>
 
 Below is a list of basic guides to setting up MySQL applications on your host box to communicate with databases located in your guest VMs.
 

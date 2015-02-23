@@ -1,4 +1,4 @@
-# Change log
+<h1>Change log</h1>
 
 ## Version 0.10.0
 

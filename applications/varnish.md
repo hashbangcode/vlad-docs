@@ -1,4 +1,4 @@
-# Varnish
+<h1>Varnish</h1>
 
 A reverse proxy server that is used as a cache mechanism for Apache page requests. Varnish listens on port 80, but it can be bypassed by directly accessing Apache on port 8080.
 

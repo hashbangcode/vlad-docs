@@ -1,4 +1,4 @@
-# Licence
+<h1>Licence</h1>
 
 The MIT License (MIT)
 

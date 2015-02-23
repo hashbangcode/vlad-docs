@@ -1,4 +1,4 @@
-# Usage
+<h1>Usage</h1>
 
 ## Getting started
 

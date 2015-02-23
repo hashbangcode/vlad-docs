@@ -1,4 +1,4 @@
-# Contributing
+<h1>Contributing</h1>
 
 If you find a bug or want to improve Vlad in some way then open up an [issue](https://github.com/hashbangcode/vlad/issues).
 

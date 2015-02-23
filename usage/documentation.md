@@ -1,4 +1,4 @@
-# Documentation
+<h1>Documentation</h1>
 
 Vlad's documentation is built using [mkdocs](http://www.mkdocs.org). 
 

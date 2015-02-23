@@ -1,4 +1,4 @@
-# Installation
+<h1>Installation</h1>
 
 This page talks you through installing the components needed to get up and running with Vlad.
 
