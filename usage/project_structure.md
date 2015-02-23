@@ -109,7 +109,7 @@ Comparatively, this is the most compromised setup on this list. This setup shoul
 	│   └── .git/
 	├── vlad_aux/
 	├── settings/
-	│   └── vlad-settings.yml
+	│   └── vlad_settings.yml
 	└── docroot/
 	    ├── .git/
 	    └── [drupal codebase...]
@@ -158,7 +158,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 	│   └── .git/
 	├── vlad_aux/
 	├── settings/
-	│   └── vlad-settings.yml
+	│   └── vlad_settings.yml
 	└── docroot/
 	    └── [drupal codebase...]
 

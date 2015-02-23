@@ -42,7 +42,7 @@ You may have to install some prerequisite Python packages first. "pip" (a Python
 
 ## Installation
 
-When you first download Vlad you will be unable to do anything with it as the system requires the use of a vlad/settings.yml file. Rename the example.settings.yml file to settings.yml and tweak the settings.yml file to suit your needs. This renaming process is intended to allow you to update your version of Vlad without overwriting your current project files or settings.
+When you first download Vlad you will be unable to do anything with it as the system requires the use of a [settings file](settings_file.md). There is an example.settings.yml file to get you started.
 
 Out of the box you will get the following options:
 

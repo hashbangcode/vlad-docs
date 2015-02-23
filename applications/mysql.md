@@ -12,13 +12,13 @@ Choose connection type "SSH" and complete the connection details as follows:
 
 **Username:** "root"
 
-**Password:** value of ```mysql_root_password``` in settings.yml
+**Password:** value of ```mysql_root_password``` in settings file
 
-**Database:** value of ```dbname``` in settings.yml *(optional)*
+**Database:** value of ```dbname``` in settings file *(optional)*
 
-**Port:** value of ```mysql_port``` in settings.yml
+**Port:** value of ```mysql_port``` in settings file
 
-**SSH Host:** value of ```boxipaddress``` in settings.yml
+**SSH Host:** value of ```boxipaddress``` in settings file
 
 **SSH User:** "vagrant"
 

@@ -12,7 +12,7 @@ A working knowledge of [Ansible playbooks](http://docs.ansible.com/playbooks.htm
 
 Vlad expects the custom role to be located at the following path, relative to the root of Vlad's own codebase (e.g. relative to the Vagrantfile):
 
-    ../vlad-custom
+    ../vlad_custom
 
 ### File structure
 
@@ -29,7 +29,7 @@ All variables defined by Vlad and possibly overridden via Vlad's settings file w
 
 Vlad will check for an optional additional settings file for use with your custom role at the following location (relative to Vlad's Vagrantfile):
 
-    ../settings/vlad-custom-settings.yml
+    ../settings/vlad_custom_settings.yml
 
 ### Example structure
 
@@ -37,22 +37,22 @@ Below is a _basic_ example file structure for a custom role, including where it 
 
 ```
 demo-project/
-├── vlad-custom/
+├── vlad_custom/
 │   └── tasks/
-│        └──  main.yml
-└── vlad/
-│   ├── Vagrantfile
+│       └── main.yml
+├── vlad/
 │   ├── vlad/
+│   ├── Vagrantfile
 │   └── [and so on...]
 ├── settings/
 └── docroot/
 ```
 
-Below is a more comprehensive example file structure for a custom role, including where it sits in relation to Vlad's own codebase. This example includes role subdirectories for default variables, templates & handlers (entirely optional). This example also demonstrates where you should place any settings that you're custom may require (`vlad-custom-settings.yml`).
+Below is a more comprehensive example file structure for a custom role, including where it sits in relation to Vlad's own codebase. This example includes role subdirectories for default variables, templates & handlers (entirely optional). This example also demonstrates where you should place any settings that you're custom may require (`vlad_custom_settings.yml`).
 
 ```
 demo-project/
-├── vlad-custom/
+├── vlad_custom/
 │   ├── defaults/
 │   │   └── main.yml
 │   ├── templates/
@@ -69,8 +69,8 @@ demo-project/
 │   ├── vlad/
 │   └── [and so on...]
 ├── settings/
-│   ├── vlad-settings.yml
-│   └── vlad-custom-settings.yml
+│   ├── vlad_settings.yml
+│   └── vlad_custom_settings.yml
 └── docroot/
 ```
 
