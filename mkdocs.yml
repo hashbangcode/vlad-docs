@@ -11,6 +11,7 @@ pages:
 
 - ['usage/installation.md', 'Usage', 'Installation']
 - ['usage/getting_started.md', 'Usage', 'Getting Started']
+- ['usage/settings_file.md', 'Usage', 'Settings file']
 - ['usage/ansible.md', 'Usage', 'Ansible']
 - ['usage/custom_roles.md', 'Usage', 'Custom Roles']
 - ['usage/example_vlad_output.md', 'Usage', 'Example Vlad Output']
