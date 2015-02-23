@@ -6,6 +6,10 @@
 
 - Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings. This will cause Ansible to fail on existing installations until settings files are adapted accordingly.
 - Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Renamed certain files/directories as per https://github.com/hashbangcode/vlad/issues/141:
+    - `vlad-custom` is now `vlad_custom` (directory to store optional custom role)
+    - `vlad-settings.yml` is now `vlad_settings.yml` (optional outer settings file for Vlad)
+    - `vlad-custom-settings.yml` is now `vlad_custom_settings.yml` (optional outer settings file for custom role)
     
 ### Non-breaking changes
 
