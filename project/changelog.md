@@ -19,6 +19,7 @@
 - Fixed issues in XHProf install.
 - Path & name of `vlad_aux` directory on host box can now be controlled via settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Custom roles no longer require a `vars/main.yml` file.
+- VM CPU cores & memory can now be tweaked in Vlad settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Numerous minor bug fixes, formatting issues and standards updates.
 
 ## Version 0.9.0
