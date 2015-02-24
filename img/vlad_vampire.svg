@@ -1,6 +1,5 @@
-<h1>Vlad</h1>
-
-<svg style="background-color:#58585A;padding:20px" width="229px" height="220px" viewBox="0 0 229 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="229px" height="220px" viewBox="0 0 229 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
     <title>Slice 1</title>
     <desc>Created with Sketch.</desc>
@@ -33,32 +32,3 @@
         </g>
     </g>
 </svg>
-
-Vlad stands for <u>V</u>agrant <u>L</u>AMP with <u>A</u>nsible and <u>D</u>rupal and is a development environment 
-that is easy to setup and has a number of features that make it useful for Drupal projects.
-
-This includes the following technologies:
-
-- MySQL
-- Apache2
-- PHP
-- Varnish
-- Git
-- Drush
-- Drush extensions: Site Audit & Registry Rebuild
-- Munin
-- Xdebug
-- Ruby
-- rbenv
-- Sendmail
-- Mailcatcher
-- Memcached
-- Redis
-- Adminer
-- XHProf
-- Solr (Version 4)
-- Node.js
-- ImageMagick
-- PimpMyLog
-
-Many of these items can be turned on and off via a settings file.
