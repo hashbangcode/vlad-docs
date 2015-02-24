@@ -13,7 +13,7 @@ Vlad can install the following technologies:
 - [Munin](munin.md)
 - [MySQL](mysql.md)
 - Node.js
-- PHP
+- [PHP](php.md)
 - PimpMyLog
 - Redis
 - Ruby (via RVM)

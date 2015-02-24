@@ -22,6 +22,7 @@ pages:
 
 - ['applications/index.md', 'Applications', 'Applications']
 - ['applications/mysql.md', 'Applications', 'MySQL']
+- ['applications/php.md', 'Applications', 'PHP']
 - ['applications/drupal.md', 'Applications', 'Drupal']
 - ['applications/varnish.md', 'Applications', 'Varnish']
 - ['applications/xhprof.md', 'Applications', 'XHProf']
