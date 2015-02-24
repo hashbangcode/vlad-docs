@@ -37,7 +37,9 @@
 Vlad stands for <u>V</u>agrant <u>L</u>AMP with <u>A</u>nsible and <u>D</u>rupal and is a development environment 
 that is easy to setup and has a number of features that make it useful for Drupal projects.
 
-This includes the following technologies:
+Vlad is designed to be a stand alone environment that provides all of the tools you need to develop Drupal sites as well as being flexable enough for you to set it up exactly how you need it.
+
+Vlad includes the following technologies:
 
 - MySQL
 - Apache2
@@ -49,7 +51,6 @@ This includes the following technologies:
 - Munin
 - Xdebug
 - Ruby
-- rbenv
 - Sendmail
 - Mailcatcher
 - Memcached
@@ -62,3 +63,15 @@ This includes the following technologies:
 - PimpMyLog
 
 Many of these items can be turned on and off via a settings file.
+
+## Using Vlad
+
+Before running Vlad you need to ensure that you have installed the necessary prerequisites. More info on this can be found on the [installation guide](usage/installation.md).
+
+Once you are ready to begin you can read the [getting started guide](usage/getting_started.md).
+
+For more information on how to set up your Vlad projects you can look at some examples on the [vlad project structure page](usage/project_structure.md).
+
+## Feedback
+
+If you have any problems, questions, comments, contributions, or other feedback then please see the [Vlad issues](https://github.com/hashbangcode/vlad/issues) page on Github. Please have a quick read over the [FAQ](project/faq.md) page before submitting questions.
