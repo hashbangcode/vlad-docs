@@ -56,7 +56,7 @@ The following example setups take different approaches and have their own pros &
 Don't forget that these are just examples. Further setups are possible and may even be a better fit for you needs.
 
 
-### [Double repos parallel](usage/project_structure/#example-setup-double-repos-parallel)
+### [2 repos parallel](usage/project_structure/#example-setup-2-repos-parallel)
 
 This is a good fit for remote sub contractors that need to adapt to another team's workflow and yet keep Vlad in Git at the same time.
 
@@ -66,7 +66,7 @@ This is a good fit for remote sub contractors that need to adapt to another team
 - Currently preferred by your humble author.
 
 
-### [Double repos nested](usage/project_structure/#example-setup-double-repos-nested)
+### [2 repos nested](usage/project_structure/#example-setup-2-repos-nested)
 
 The most powerful and most complex example here. This setup is probably the best fit for well organised teams that aren't afraid of more advanced concepts such as Git submodules and alternative (maybe better) deployment methods.
 
@@ -77,15 +77,15 @@ The most powerful and most complex example here. This setup is probably the best
 - Sub contractors will likely need initial orientation.
 
 
-### [Single repo in docroot](usage/project_structure/#example-setup-single-repo-in-docroot)
+### [1 repo in docroot](usage/project_structure/#example-setup-1-repo-in-docroot)
 
-A minimal setup that sacrifices some flexibility for simplicity. This is the goto setup if for whatever reason you cannot use "Double repos parallel" or "Double repos nested".
+A minimal setup that sacrifices some flexibility for simplicity. This is the goto setup if for whatever reason you cannot use "2 repos parallel" or "2 repos nested".
 
 - Allows for deployment to remotes directly using Git.
 - Vlad not in version control and would need to be updated manually.
 
 
-### [Single repo in project root](usage/project_structure/#example-setup-single-repo-in-project-root)
+### [1 repo in project root](usage/project_structure/#example-setup-1-repo-in-project-root)
 
 Comparatively, this is the most compromised setup on this list. This setup should only really be considered if for whatever reason you cannot go with any of the other setups described.
 
@@ -97,7 +97,7 @@ Comparatively, this is the most compromised setup on this list. This setup shoul
 ----
 
 
-## Example setup: Double repos parallel
+## Example setup: 2 repos parallel
 
 	demo-project/
 	├── vlad/
@@ -144,7 +144,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 ----
 
 
-## Example setup: Double repos nested
+## Example setup: 2 repos nested
 
 	demo-project/
 	├── .git/
@@ -192,7 +192,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 ----
 
 
-## Example setup: Single repo in docroot
+## Example setup: 1 repo in docroot
 
 	demo-project/
 	├── vlad_aux/
@@ -232,7 +232,7 @@ This setup is far simpler than the preceding examples and involves simply nestin
 ----
 
 
-## Example setup: Single repo in project root
+## Example setup: 1 repo in project root
 
 	demo-project/
 	├── .git/
