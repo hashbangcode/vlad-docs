@@ -1,6 +1,6 @@
 <h1>Change log</h1>
 
-## Version 0.10.0
+## Version 1.0
 
 ### BREAKING CHANGES
 
@@ -10,16 +10,22 @@
     - `vlad-custom` is now `vlad_custom` (directory to store optional custom role)
     - `vlad-settings.yml` is now `vlad_settings.yml` (optional outer settings file for Vlad)
     - `vlad-custom-settings.yml` is now `vlad_custom_settings.yml` (optional outer settings file for custom role)
-    
+
 ### Non-breaking changes
 
 - Added multi operating system support. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Added CentOS support. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Added Ubuntu 14 support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added support for different PHP versions, including 5.3, 5.4, 5.5, and 5.6. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Rmoved "Hacked!" module as it can only be used from within a Drupal site.
+- Added more options and variables for MySQL. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Fixed issues in XHProf install.
+- Fixed general issues in PEAR and PECL installs.
+- Fixed uploadprogress install.
 - Path & name of `vlad_aux` directory on host box can now be controlled via settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Custom roles no longer require a `vars/main.yml` file.
 - VM CPU cores & memory can now be tweaked in Vlad settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Removed most detail from Vlad Readme file and setup a separate documentation site.
 - Numerous minor bug fixes, formatting issues and standards updates.
 
 ## Version 0.9.0
