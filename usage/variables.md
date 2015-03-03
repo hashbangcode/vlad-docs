@@ -106,7 +106,7 @@ __mailcatcher_install__
 
 Installs Mailcatcher. Also installs the Ruby task as a dependency.
 
-default value: true
+default value: false
 
 __memcached_install__
 
@@ -142,7 +142,7 @@ __pimpmylog_install__
 
 Installs PimpMyLog.
 
-default value: true
+default value: false
 
 __redis_install__
 
@@ -152,15 +152,15 @@ default value: false
 
 __ruby_install__
 
-Installs Ruby.
+Installs Ruby. Ruby is required by MailCatcher.
 
-default value: true # Ruby is required by MailCatcher
+default value: false
 
 __sendmail_install__
 
 Installs the Sendmail server.
 
-default value: true
+default value: false
 
 __solr_install__
 
@@ -172,7 +172,7 @@ __varnish_install__
 
 Installs Varnish. Vlad will run checks to ensure that varnish can listen on port 80 and that Apache doesn't clash with that port.
 
-default value: true
+default value: false
 
 __xhprof_install__
 
@@ -192,9 +192,9 @@ default value: false
 
 __http_port__
 
-HTTP port for the web server. If you have turned off Varnish then you might want to set this to "80".
+HTTP port for the web server. If you have opted to install Varnish you will likely want to change this to `8080`.
 
-default value: 8080
+default value: 80
 
 __varnish_http_port__
 
