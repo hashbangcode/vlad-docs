@@ -2,10 +2,9 @@
 
 Future development prospects.
 
-## Version 1.1
+For general information about milestone progress and even estimated due dates(!) see [GitHub milestones](https://github.com/hashbangcode/vlad/milestones).
 
-See [1.1 milestone](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.1+).
+For more detailed info about what each milestone consists of see below:
 
-## Version 1.2
-
-See [1.2 milestone](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.2+).
+- ### [1.1](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.1+)
+- ### [1.2](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.2+)
