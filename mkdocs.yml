@@ -35,6 +35,7 @@ pages:
 - ['contributing/testing.md', 'Contributing', 'Testing']
 
 - ['project/faq.md', 'Project', 'FAQ']
+- ['project/notice_board.md', 'Project', 'Notice board']
 - ['project/roadmap.md', 'Project', 'Roadmap']
 - ['project/about.md', 'Project', 'About']
 - ['project/thanks.md', 'Project', 'Thanks']
