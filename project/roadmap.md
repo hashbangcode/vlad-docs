@@ -1,15 +1,11 @@
-<h1>Road Map</h1>
+<h1>Road map</h1>
 
 Future development prospects.
 
 ## Version 1.1
 
-- Add multiple site support within a single box so that a single Vlad build can have multiple sites installed. This can essentially be split into separate elements:
-    - Multiple docroot folder support.
-    - Apache multiple site configuration.
-    - MySQL multiple database configuraiton.
-    - Solr multiple collections configuraiton.
+See [1.1 milestone](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.1+).
 
 ## Version 1.2
 
-- Add Nginx web server support.
+See [1.2 milestone](https://github.com/hashbangcode/vlad/issues?q=is%3Aissue+milestone%3A1.2+).
