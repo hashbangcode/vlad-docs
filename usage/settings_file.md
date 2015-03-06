@@ -12,3 +12,21 @@ Vlad is happy for you to store your settings in one of 2 possible locations (rel
 If Vlad finds both files it will prefer the "outer" settings file.
 
 See [Project structure](project_structure.md) for more information about why you'd want to consider the location of your settings file.
+
+### "Local" settings file (optional)
+
+Vlad's settings can be further overridden via an optional "local" settings file in one of 2 possible locations (relative to Vlad's `Vagrantfile`):
+
+1. "Inner" local settings file: vlad/local_settings.yml
+2. "Outer" local settings file: ../settings/vlad_local_settings.yml
+
+The local settings file will always be loaded last and provides a convenient means to make adjustments to your own environment that may be out of the scope of the project itself. For example:
+
+- boxipaddress
+- git_user_email
+- git_user_name
+- hosts_file_location
+- hosts_file_update
+- host_synced_folder
+- synced_folder_type
+- use_host_id
