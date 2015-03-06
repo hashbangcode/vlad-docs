@@ -1,5 +1,11 @@
 <h1>Change log</h1>
 
+## Version 1.0.2
+
+- Fixed [#145](https://github.com/hashbangcode/vlad/issues/145): Sequel Pro connection issues.
+- Less software is now installed by default in the interest of simplicity and faster build times out of the box (LAMP stack + Drush).
+- Settings can be further overridden via an optional "local" settings file. See [Settings file](../usage/settings_file.md).
+
 ## Version 1.0.1
 
 - Fixed [#143](https://github.com/hashbangcode/vlad/issues/143): Drupal 8 dev install script error.
