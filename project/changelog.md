@@ -1,5 +1,9 @@
 <h1>Change log</h1>
 
+## Version 1.0.1
+
+- Fixed [#143](https://github.com/hashbangcode/vlad/issues/143): Drupal 8 dev install script error.
+
 ## Version 1.0
 
 ### BREAKING CHANGES
@@ -17,7 +21,7 @@
 - Added CentOS support. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Added Ubuntu 14 support. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Added support for different PHP versions, including 5.3, 5.4, 5.5, and 5.6. See [Variables](../usage/variables.md#vagrantfile-configuration).
-- Rmoved "Hacked!" module as it can only be used from within a Drupal site.
+- Removed "Hacked!" module as it can only be used from within a Drupal site.
 - Added more options and variables for MySQL. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Fixed issues in XHProf install.
 - Fixed general issues in PEAR and PECL installs.
