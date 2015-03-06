@@ -5,6 +5,7 @@
 - Fixed [#145](https://github.com/hashbangcode/vlad/issues/145): Sequel Pro connection issues.
 - Less software is now installed by default in the interest of simplicity and faster build times out of the box (LAMP stack + Drush).
 - Settings can be further overridden via an optional "local" settings file. See [Settings file](../usage/settings_file.md).
+- Added another settings file location so that the "outer" settings file can be kept alongside the VagrantFile.
 
 ## Version 1.0.1
 
