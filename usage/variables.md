@@ -26,7 +26,7 @@ default value: "192.168.100.100"
 
 __boxname__
 
-The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This will be translated to boxname + "_vlad" in said virtual box manager.
+The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This value should only contain letters, numbers, hyphens or dots. The VM will appear as `boxname` + "_vlad" in your chosen virtual machine manager.
 
 default value: "vlad"
 
