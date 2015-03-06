@@ -1,5 +1,12 @@
 <h1>Change log</h1>
 
+## Version 1.0.3
+
+- Fixed some wonky yaml syntax - now using proper structured maps.
+- Fixed odd issue with ports test failing with default values.
+- Less software installed by default. A previous similar commit only amended example.settings.yml - this commit changes the actual default variable values.
+
+
 ## Version 1.0.2
 
 - Fixed [#145](https://github.com/hashbangcode/vlad/issues/145): Sequel Pro connection issues.
