@@ -8,7 +8,7 @@ Choose connection type "SSH" and complete the connection details as follows:
 
 **Name:** Whatever you'd like to label this connection.
 
-**MySQL Host:** "127.0.0.1" *(equivalent of "localhost" on the guest box)*
+**MySQL Host:** value of ```boxipaddress``` in settings file
 
 **Username:** "root"
 
@@ -24,7 +24,7 @@ Choose connection type "SSH" and complete the connection details as follows:
 
 **SSH Key:** "~/.vagrant.d/insecure_private_key" *(browse to this file by clicking the key icon)*
 
-## MySQL Workbench (OS X)
+## MySQL Workbench
 As above - the values go in the following dialog:
 
 ![Vlad MySQL Workbench Settings](img/mysql-workbench-settings.png)
