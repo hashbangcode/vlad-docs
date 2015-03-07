@@ -14,4 +14,4 @@ These tests were added partly to give confidence that the box has been setup cor
 
 It is possible to run the tests manually by using the 'test' tag like this:
 
-    ansible-playbook -i vlad/host.ini -t test vlad/playbooks/site.yml
+    ansible-playbook vlad/playbooks/site.yml -t test
