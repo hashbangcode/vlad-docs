@@ -13,24 +13,16 @@ In order to make the Ansible tasks in Vlad easy to read they should follow the f
 
 ## Examples
 
-```
-#!yaml
+    - name: add varnish vcl
+      template: src=varnish_defaultvcl.j2 dest=/etc/varnish/default.vcl
+      sudo: true
+      notify:
+       - restart varnish
 
-- name: add varnish vcl
-  template: src=varnish_defaultvcl.j2 dest=/etc/varnish/default.vcl
-  sudo: true
-  notify:
-   - restart varnish
-```
-
-```
-#!yaml
-
-- name: install MailCatcher prerequisite packages
-  apt: pkg={{ item }} state=installed
-  with_items:
-    - rubygems
-    - libsqlite3-dev
-    - ruby-dev
-  sudo: true
-```
+    - name: install MailCatcher prerequisite packages
+      apt: pkg={{ item }} state=installed
+      with_items:
+        - rubygems
+        - libsqlite3-dev
+        - ruby-dev
+      sudo: true
