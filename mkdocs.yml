@@ -31,6 +31,7 @@ pages:
 
 - ['contributing/contributing.md', 'Contributing']
 - ['contributing/naming_convention.md', 'Contributing', 'Task naming convention']
+- ['contributing/submitting_tickets.md', 'Contributing', 'Submitting Tickets']
 - ['contributing/order_convention.md', 'Contributing', 'Task attribute order convention']
 - ['contributing/testing.md', 'Contributing', 'Testing']
 
