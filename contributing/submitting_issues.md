@@ -1,4 +1,4 @@
-<h1>Submitting Tickets</h1>
+<h1>Submitting issues</h1>
 
 If you find a problem with Vlad then we would love to hear from you on the issue queue. Due to the dependent nature of the applications involved it really saves time if you ensure that you are up to date with the Vagrant, VirtualBox, and Ansible software. This helps to eliminate them from the list of problems.
 
