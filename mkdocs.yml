@@ -19,6 +19,7 @@ pages:
 - ['usage/documentation.md', 'Usage', 'Documentation']
 - ['usage/vagrant_share.md', 'Usage', 'Vagrant share']
 - ['usage/variables.md', 'Usage', 'Variables']
+- ['usage/windows.md', 'Usage', 'Windows']
 
 - ['applications/index.md', 'Applications', 'Applications']
 - ['applications/mysql.md', 'Applications', 'MySQL']
