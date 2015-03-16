@@ -263,7 +263,7 @@ default value: Europe/London
 
 __php_pecl_uploadprogress__
 
-default value: true
+default value: false
 
 ### PHP APC
 
