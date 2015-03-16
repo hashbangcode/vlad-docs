@@ -1,4 +1,4 @@
-# Getting started with XHProf
+<h1>Getting started with XHProf</h1>
 
 XHProf is an extension for PHP that allows performance statistics to be recorded. Vlad includes the XHGUI application that allows the statistics found to be used and interpreted. You can access the XHGUI via URL [http://xhprof.drupal.local/](http://xhprof.drupal.local/).
 
@@ -11,3 +11,5 @@ This will continue to record statistics until you tell it not to. This can be do
     http://www.drupal.local:8080/?_profile=0
     
 XHGUI is available at https://github.com/preinheimer/xhprof
+
+Note that when enabled, XHProf injects "Profiler output" links at the bottom of each page on the site. This can cause errors or unexpected behavior with Ajax callback pages, such as Drupal's autocomplete form fields and others.

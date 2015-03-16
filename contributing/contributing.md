@@ -1,4 +1,4 @@
-# Contributing
+<h1>Contributing</h1>
 
 If you find a bug or want to improve Vlad in some way then open up an [issue](https://github.com/hashbangcode/vlad/issues).
 
@@ -10,6 +10,6 @@ In order to ensure that things run correctly all software installed should have 
 
 The following is a list of standards that should be adhered to when contributing to Vlad.
 
-[Name Convention](Ansible%20Name%20Convention)
+- [Task naming convention](naming_convention.md)
 
-[Task Order Of Options Convention](Task%20Order%20Of%20Options%20Convention)
+- [Task attribute order convention](order_convention.md)

@@ -1,4 +1,4 @@
-# About Vlad
+<h1>About Vlad</h1>
 
 Vlad stands for <u>V</u>agrant <u>L</u>AMP with <u>A</u>nsible and <u>D</u>rupal and is a development environment 
 that is easy to setup and has a number of features that make it useful for Drupal projects.

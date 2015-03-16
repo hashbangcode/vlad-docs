@@ -1,19 +1,49 @@
-# Changelog
+<h1>Change log</h1>
 
-## Version 0.10.0
+## Version 1.0.3
 
-### BREAKING CHANGE
+- Fixed some wonky yaml syntax - now using proper structured maps.
+- Fixed odd issue with ports test failing with default values.
+- Less software installed by default. A previous similar commit only amended example.settings.yml - this commit changes the actual default variable values.
 
-- Moved to using boolean values (true/false) for settings variables in place of "y"/"n" strings.
-    - This will break previous installations until settings files are adapted accordingly.
-    
+
+## Version 1.0.2
+
+- Fixed [#145](https://github.com/hashbangcode/vlad/issues/145): Sequel Pro connection issues.
+- Less software is now installed by default in the interest of simplicity and faster build times out of the box (LAMP stack + Drush).
+- Settings can be further overridden via an optional "local" settings file. See [Settings file](../usage/settings_file.md).
+- Added another settings file location so that the "outer" settings file can be kept alongside the VagrantFile.
+
+## Version 1.0.1
+
+- Fixed [#143](https://github.com/hashbangcode/vlad/issues/143): Drupal 8 dev install script error.
+
+## Version 1.0
+
+### BREAKING CHANGES
+
+- Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings. This will cause Ansible to fail on existing installations until settings files are adapted accordingly.
+- Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Renamed certain files/directories as per https://github.com/hashbangcode/vlad/issues/141:
+    - `vlad-custom` is now `vlad_custom` (directory to store optional custom role)
+    - `vlad-settings.yml` is now `vlad_settings.yml` (optional outer settings file for Vlad)
+    - `vlad-custom-settings.yml` is now `vlad_custom_settings.yml` (optional outer settings file for custom role)
+
 ### Non-breaking changes
 
-- Added a docs directory, which contains ongoing documentation for the Vlad project.
-- Added multi operating system support.
-- Added CentOS support
-- Added Ubuntu 14 support.
+- Added multi operating system support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added CentOS support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added Ubuntu 14 support. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Added support for different PHP versions, including 5.3, 5.4, 5.5, and 5.6. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Removed "Hacked!" module as it can only be used from within a Drupal site.
+- Added more options and variables for MySQL. See [Variables](../usage/variables.md#vagrantfile-configuration).
 - Fixed issues in XHProf install.
+- Fixed general issues in PEAR and PECL installs.
+- Fixed uploadprogress install.
+- Path & name of `vlad_aux` directory on host box can now be controlled via settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Custom roles no longer require a `vars/main.yml` file.
+- VM CPU cores & memory can now be tweaked in Vlad settings. See [Variables](../usage/variables.md#vagrantfile-configuration).
+- Removed most detail from Vlad Readme file and setup a separate documentation site.
 - Numerous minor bug fixes, formatting issues and standards updates.
 
 ## Version 0.9.0

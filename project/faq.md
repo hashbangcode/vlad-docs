@@ -1,8 +1,8 @@
-# Frequently Asked Questions
+<h1>Frequently Asked Questions</h1>
 
 ## Can I use the Ansible playbooks in Vlad on my production server?
 
-It is possible to run the Ansible playbooks in Vlad on a remote server to set it up in the same way, but it shouldn't be done. There are a few security free measures that Vlad uses in order to allow easy access to the box which would allow open access to the production box you set up. However, it is possible to use the playbooks in Vlad as a template for setting up servers, but care must be taken to ensure best practice security measures are followed.
+It is possible to run the Ansible playbooks in Vlad on a remote server to set it up in the same way, but it shouldn't be done. There are a few 'security free' measures that Vlad uses in order to allow easy access to the box which would allow open access to the production box you set up. However, it is possible to use the playbooks in Vlad as a template for setting up servers, but care must be taken to ensure best practice security measures are followed.
 
 ## Can you include software X?
 

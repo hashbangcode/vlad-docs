@@ -1,4 +1,4 @@
-# Testing
+<h1>Testing</h1>
 
 Vlad runs some low level testing to give you peace of mind that everything is installed and that any changes made to the playbooks doesn't break the box.
 
@@ -14,4 +14,4 @@ These tests were added partly to give confidence that the box has been setup cor
 
 It is possible to run the tests manually by using the 'test' tag like this:
 
-    ansible-playbook -i vlad/host.ini -t test vlad/playbooks/site.yml
+    ansible-playbook vlad/playbooks/site.yml -t test

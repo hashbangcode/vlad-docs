@@ -1,21 +1,22 @@
-The following variables can be set in the settings.yml file.
+<h1>Variables</h1>
 
+The following variables can be set in Vlad's [settings file](settings_file.md).
 
-### Webserver settings
+## Webserver
 
 __webserver_hostname__
 
 The hostname of the site you are about to create. By default this is then combined with the variable webserver_hostname_alias to add 'www' to the start.
 
 default value: 'drupal.local'
- 
+
 __webserver_hostname_alias__
 
 This is the fully qualified name of the server.
 
 default value: 'www.{{ webserver_hostname }}'
 
-### Vagrantfile configuration
+## Vagrantfile configuration
 
 __boxipaddress__
 
@@ -25,9 +26,19 @@ default value: "192.168.100.100"
 
 __boxname__
 
-The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This will be translated to boxname + "_vlad" in said virtual box manager.
-  
+The name of the box that will be used by Vagrant to label the box inside your virtual machine manager of choice. This value should only contain letters, numbers, hyphens or dots. The VM will appear as `boxname` + "_vlad" in your chosen virtual machine manager.
+
 default value: "vlad"
+
+__vlad_os__
+
+The OS that vlad will use. This can be one of the following:
+
+- "centos65"
+- "ubuntu12"
+- "ubuntu14"
+
+default value: "ubuntu14"
 
 __host_synced_folder__
 
@@ -35,123 +46,155 @@ This is the directory that will be used to server the files from. If this doesn'
 
 default value: "./docroot"
 
-### Install components:
+__aux_synced_folder__
+
+This is a secondary Vagrant synced folder used to sync files that don't belong in `host_synced_folder`. If this doesn't exist then it will be created.
+
+default value: "./vlad_aux"
+
+__synced_folder_type__
+
+Use 'nfs' or 'rsync' for VM file editing in synced folder.
+
+default value: 'nfs'
+
+__ansible_verbosity__
+
+Set the level of verbosity that Ansible will use.
+This can be one of "", "v", "vv", "vvv", or "vvvv".
+
+default value: ""
+
+__vm_cpus__
+
+Number of CPU cores to be allocated to the guest VM from the host machine. This can be an integer or can be set to `"auto"` for Vlad to automatically assign all available cores.
+
+default value: '2'
+
+__vm_memory__
+
+Amount of memory to be allocated to the guest VM from the host machine. This can be an integer (MB) or can be set to `"auto"` for Vlad to automatically assign 1/4 of host machine's memory.
+
+default value: '1024'
+
+## Components to install
 
 The server components that will be installed when the box is provisioned.
+
 - To install a component set it to true.
 - To leave a component out of the install set the value to false.
 
 __adminer_install__
 
-Install
+Installs Adminer.
 
 default value: true
 
 __apache_install__
 
-Install
+Installs Apache server.
 
 default value: true
 
 __imagemagick_install__
 
-Install
+Installs Imagemagick as well as the PHP extension.
 
 default value: false
 
 __mailcatcher_install__
 
-Install
+Installs Mailcatcher. Also installs the Ruby task as a dependency.
 
-default value: true
+default value: false
 
 __memcached_install__
-       
-Install
+
+Installs Memcache as well as the PHP extension.
 
 default value: false
 
 __munin_install__
 
-Install
+Installs Munin server.
 
 default value: false
 
 __mysql_install__
 
-Install
+Installs MySQL.
 
 default value: true
 
 __node_install__
-            
-Install
+
+Installs Node.
 
 default value: false
 
 __php_install__
-             
-Install
+
+Installs PHP, including a number of PHP packages as well as APC, Composer, and Xdebug.
 
 default value: true
 
 __pimpmylog_install__
-                   
-Install
 
-default value: true
+Installs PimpMyLog.
+
+default value: false
 
 __redis_install__
-               
-Install
+
+Installs Redis.
 
 default value: false
 
 __ruby_install__
-              
-Install
 
-default value: true # Ruby is required by MailCatcher
+Installs Ruby. Ruby is required by MailCatcher.
+
+default value: false
 
 __sendmail_install__
-                  
-Install
 
-default value: true
+Installs the Sendmail server.
+
+default value: false
 
 __solr_install__
 
-Install
+Installs Tomcat 6 and Solr 4.
 
 default value: false
 
 __varnish_install__
-                 
-Install
 
-default value: true # If you turn this off then make sure you set the http_port to be 80.
-
-__xhprof_install__
-                
-Install
+Installs Varnish. Vlad will run checks to ensure that varnish can listen on port 80 and that Apache doesn't clash with that port.
 
 default value: false
 
-### Provision with custom role
+__xhprof_install__
+
+Installs Xhprof and a Xhprof GUI.
+
+default value: false
+
+## Provision with custom role
 
 __custom_provision__
 
-Run custom roles. See the [custom roles](../usage/custom_roles.md) section for more information.
+Run a custom role as part of provisioning. See [Custom roles](../usage/custom_roles.md) for more information.
 
 default value: false
 
-### General HTTP Port Variables
+## HTTP ports
 
 __http_port__
 
-HTTP port for the web server. If you have turned off Varnish then you might want to set this to "80".
+HTTP port for the web server. If you have opted to install Varnish you will likely want to change this to `8080`.
 
-default value: 8080
+default value: 80
 
 __varnish_http_port__
 
@@ -159,7 +202,7 @@ HTTP port for the Varnish cache.
 
 default value: 80
 
-### Administration email
+## Administration email
 
 __admin_mail__
 
@@ -167,15 +210,22 @@ Used in instances when a server email is needed.
 
 default value: 'test@example.com'
 
-### PHP Settings
+## PHP
 
 __php_version__
 
-PHP Version, can be one of "5.3" or "5.4". Vlad will error when a version that isn't understood is used
+The version of PHP to install (dependent on OS). Can be one of:
 
-default value: "5.4"
+- "5.3"
+- "5.4"
+- "5.5"
+- "5.6"
 
-### #php.ini settings
+Note that Ubuntu 14 won't install < PHP5.4 so you'll get PHP5.5+. Vlad will error when a version that isn't understood is used.
+
+default value: "5.5"
+
+### php.ini
 
 __php_memory_limit__
 
@@ -209,13 +259,13 @@ __php_date_timezone__
 
 default value: Europe/London
 
-### #Install PECL uploadprogress
+### Install PECL uploadprogress
 
 __php_pecl_uploadprogress__
 
 default value: true
 
-### #PHP APC Settings
+### PHP APC
 
 __apc_rfc1867__
 
@@ -233,7 +283,8 @@ __apc_num_files_hint__
 
 default value: '0'
 
-###  MySQL Settings
+##  MySQL
+
 __mysql_port__
 
 default value: 3306
@@ -258,15 +309,23 @@ __dbpass__
 
 default value: wibble
 
-### # MySQL my.cnf settings
+### MySQL my.cnf
 
 __mysql_max_allowed_packet__
 
 default value: 128M
 
+__innodb_buffer_pool_size__
+
+default value: 64M
+
 __innodb_file_per_table__
 
-default value: innodb_file_per_table
+default value: true
+
+__innodb_log_file_size__
+
+default value: 64M
 
 __mysql_character_set_server__
 
@@ -276,7 +335,11 @@ __mysql_collation_server__
 
 default value: utf8_general_ci
 
-###  SSH Settings
+__skip_name_resolve__
+
+default value: true
+
+##  SSH
 
 __ssh_port__
 
@@ -285,20 +348,33 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase. Options include:
+Does not support identites that require a passphrase. 
+
+Options include:
+
 - false         : don't add anything
 - true          : add default files  (~/.ssh/id_rsa, ~/.ssh/id_dsa & ~/.ssh/identity)
 - "[filename]"  : add a specific file e.g. /Users/username/.ssh/[filename]
 
 default value: false
 
-###  Varnish Settings
+##  Varnish
 
 __varnish_memory__
 
+Sets the amount of memory that Varnish can use (in Megabytes).
+
 default value: 512
 
-### Other Settings
+## Redis
+
+__redis_port__
+
+Sets the port Redis should listen on.
+
+default value: 6379
+
+## Other settings
 
 __drupal_solr_package__
 
@@ -309,7 +385,9 @@ default value: "search_api_solr"
 __hosts_file_location__
 
 Local hosts file location.
+
 Default location on *nix hosts is '/etc/hosts'.
+
 Default location for GasMask on OSX is '/Users/< username >/Library/Gas Mask/Local/< file >.hst'.
 
 default value: "/etc/hosts"
@@ -320,22 +398,12 @@ Select whether Vlad should edit the hosts file.
 
 default value: true
 
-__redis_port__
-
-Redis Port
-
-default value: 6379
-
-__ansible_verbosity__
-
-Set the level of verbosity that Ansible will use.
-This can be one of "", "v", "vv", "vvv", or "vvvv".
-
-default value: ""
-
 __db_import_up__
 
-Import MySQL database from file on 'vagrant up'. Options include:
+Import MySQL database from file on 'vagrant up'. 
+
+Options include:
+
 - false          - don't import anything
 - true          - import from vlad_aux/db_io/vlad_up.sql.gz
 - "[filename]" - import from vlad_aux/db_io/[filename] (supports .sql, .bz2 and .gz files)
@@ -344,34 +412,22 @@ default value: false
 
 __add_index_file__
 
-Add the default index.php file (useful to turn off if you are going git clone into the web root folder)
+Add the default index.php file (useful to turn off if you are going git clone into the web root folder). Vlad will also not overwrite any existing index.php file present in the docroot location.
 
 default value: true
 
-__synced_folder_type__
+## Git config user credentials
 
-Use 'nfs' or 'rsync' for VM file editing in synced folder
-
-default value: 'nfs'
-
-__vlad_os__
-
-The OS that vlad will use. This can be one of the following:
-
-- "centos65"
-- "ubuntu12"
-- "ubuntu14"
-
-default value: "ubuntu12"
-
-### Git config user credentials
-
-Leave these variales empty to skip this step.
+Leave these variables empty to skip this step.
 
 __git_user_name__
+
+Your git username.
 
 default value: ""
 
 __git_user_email__
+
+Your git email address.
 
 default value: ""

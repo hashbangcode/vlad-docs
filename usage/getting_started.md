@@ -1,6 +1,8 @@
-# Usage
+<h1>Usage</h1>
 
-When you first download Vlad you will be unable to do anything with it as the system requires the use of a settings.yml file (kept within the vlad directory). Rename the example.settings.yml file to settings.yml and tweak the settings.yml file to suit your needs. This renaming process is intended to allow you to update your version of Vlad without overwriting your current project files or settings.
+## Getting started
+
+When you first download Vlad you will be unable to do anything with it as the system requires the use of a [settings file](settings_file.md). There is an example.settings.yml file to get you started.
 
 Out of the box you will get the following options:
 
@@ -76,7 +78,7 @@ The Varnish secret key for the box is 04788b22-e179-4579-aac7-f3541fb40391, you 
 
 ## Settings
 
-A file called settings.yml is used to configure the Vagrant box. This allows you to control everything but the IP address of the box.
+Vlad uses a [settings file](settings_file.md) to configure the Vagrant box. This allows you to control everything but the IP address of the box.
 
 For example, to install Solr on the box go into the settings file and change the solr_install parameter from this:
 
@@ -90,4 +92,4 @@ The default behaviour of the box is to install a Varnish server that proxies an 
 
 ## Drush
 
-Both Drush 6.x (stable) and 7.x (dev) are installed on the Vagrant box. The 6.x version will run by default, when you run `drush`. To access the 7.x version, required for Drupal 8, use the alias `drush-master`.
+Both Drush 6.x (stable) and 7.x (dev) are installed on the Vagrant box. The 6.x version will run by default, when you run `drush`. To access the 7.x version, required for Drupal 8, use the alias `drush-master` or `drush7`.

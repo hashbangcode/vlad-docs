@@ -1,6 +1,6 @@
-# Xdebug
+<h1>Xdebug</h1>
 
-The following lines detail the options that Vlad sets as the Xdegub setups.
+The following lines detail the options that Vlad sets as the Xdebug setup.
 
     xdebug.remote_enable=1
     xdebug.remote_port=9000
