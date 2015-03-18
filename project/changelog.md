@@ -1,5 +1,21 @@
 <h1>Change log</h1>
 
+## Version 1.0.4
+
+- PECL uploadprogress no longer installed by default
+- A small tweak to the way in which adminer is tested
+- Added a clause to turn off the default site on ubuntu 14 boxes
+- More stability fixes to drush playbook
+- Added a small change to allow xdebug with PHP 5.3 on debian to installed
+- Addresses #150: Drush clear cache handler
+- Addresses #151: Add hosts.ini location to ansible config file
+- Changed the command task to a shell task when using composer to download drush due to the * in the command
+- Added a couple of flags to the composer crush install to force it to install at /home/vagrant
+- Corrected an issue where the curl tests wouldn't resolve the host if the port wasn't present
+- Take of copy of any current local settings file on provision (vlad_aux/tmp/)
+- Minor grammar correction in settings feedback.
+- Undoing the Varnish/Apache port test change in 1.0.3.
+
 ## Version 1.0.3
 
 - Fixed some wonky yaml syntax - now using proper structured maps.
