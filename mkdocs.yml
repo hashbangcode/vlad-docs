@@ -1,6 +1,6 @@
 site_name: Vlad
 
-repo_url: https://github.com/hashbangcode/vlad
+repo_url: https://github.com/hashbangcode/vlad-docs
 site_description: 'Vlad: Vagrant LAMP with Ansible and Drupal.'
 docs_dir: .
 site_dir: ../docs_site
