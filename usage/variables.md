@@ -77,6 +77,12 @@ Amount of memory to be allocated to the guest VM from the host machine. This can
 
 default value: '1024'
 
+__suppress_passwords__
+
+Prevent Vlad from asking for sudo passwords when setting up the system. This can be used when the correct sudoers file is in place on the host box. This is useful when running automated tests on the system.
+
+default value: false
+
 ## Components to install
 
 The server components that will be installed when the box is provisioned.
@@ -348,7 +354,7 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase. 
+Does not support identites that require a passphrase.
 
 Options include:
 
@@ -400,7 +406,7 @@ default value: true
 
 __db_import_up__
 
-Import MySQL database from file on 'vagrant up'. 
+Import MySQL database from file on 'vagrant up'.
 
 Options include:
 
