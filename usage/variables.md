@@ -305,13 +305,23 @@ default value: vlad
 
 __dbname__
 
-default value: vladdb
+This is a list of databases that Vlad will generate. As a default a single database is created but this value can be changed to make Vlad add more databases. The following setting will generate two databases, one called 'database1' and the other called 'database2'.
+
+    dbname: ['database1', 'database2']
+
+Each database has the same access privileges.
+
+default value: ['vladdb']
 
 __dbuser__
+
+The user that will be created for the databases.
 
 default value: vlad
 
 __dbpass__
+
+The password for the database user.
 
 default value: wibble
 
