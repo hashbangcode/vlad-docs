@@ -311,6 +311,8 @@ This is a list of databases that Vlad will generate. As a default a single datab
 
 Each database has the same access privileges.
 
+It should be noted that the first database in this list is always used as the default database. This database is used by Vlad when running automatic actions such as exporting or importing the database.
+
 default value: ['vladdb']
 
 __dbuser__
