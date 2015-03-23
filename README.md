@@ -2,4 +2,4 @@
 
 # Documentation repository for Vlad
 
-Contribute to this project to improve the documentation for [Vlad](https://github.com/hashbangcode/vlad).
+Contribute to this project to improve the [documentation](http://vlad-docs.readthedocs.org/en/latest/) for [Vlad](https://github.com/hashbangcode/vlad).
