@@ -78,6 +78,12 @@ Amount of memory to be allocated to the guest VM from the host machine. This can
 
 default value: '1024'
 
+__suppress_passwords__
+
+Prevent Vlad from asking for sudo passwords when setting up the system. This can be used when the correct sudoers file is in place on the host box. This is useful when running automated tests on the system.
+
+default value: false
+
 ## Components to install
 
 The server components that will be installed when the box is provisioned.
@@ -300,13 +306,25 @@ default value: vlad
 
 __dbname__
 
-default value: vladdb
+This is a list of databases that Vlad will generate. As a default a single database is created but this value can be changed to make Vlad add more databases. The following setting will generate two databases, one called 'database1' and the other called 'database2'.
+
+    dbname: ['database1', 'database2']
+
+Each database has the same access privileges.
+
+It should be noted that the first database in this list is always used as the default database. This database is used by Vlad when running automatic actions such as exporting or importing the database.
+
+default value: ['vladdb']
 
 __dbuser__
+
+The user that will be created for the databases.
 
 default value: vlad
 
 __dbpass__
+
+The password for the database user.
 
 default value: wibble
 
@@ -349,7 +367,7 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase. 
+Does not support identites that require a passphrase.
 
 Options include:
 
@@ -401,7 +419,7 @@ default value: true
 
 __db_import_up__
 
-Import MySQL database from file on 'vagrant up'. 
+Import MySQL database from file on 'vagrant up'.
 
 Options include:
 
