@@ -54,6 +54,7 @@ default value: "./vlad_aux"
 
 __synced_folder_type__
 
+*Only applicable for when running VLAD on a non-Windows host.*
 Use 'nfs' or 'rsync' for VM file editing in synced folder.
 
 default value: 'nfs'

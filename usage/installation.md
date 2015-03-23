@@ -11,7 +11,7 @@ Vlad has a number of prerequisites that need to be met before things will work c
 - The vagrant-triggers plugin.
 - Ansible 1.6+
 
-Vlad has been tested as working on Linux and OS X platforms, but Windows is currently unsupported. Vlad has been tested with the VirtualBox and VMware Fusion providers and as such other providers are currently not supported.
+Vlad has been tested as working on Linux, OS X platforms, and Windows~~, but Windows is currently unsupported~~. Vlad has been tested with the VirtualBox and VMware Fusion providers and as such other providers are currently not supported.
 
 ### Vagrant
 
