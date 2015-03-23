@@ -12,7 +12,16 @@ This will generate a single database called 'vladdb' on the provisioned box. Thi
 
     dbname: ['vladdb', 'database2']
 
-It should be noted that the first database in this list is always used as the default database. This database is used by Vlad when running automatic actions such as exporting or importing the database.
+It should be noted that the first database in this list is always used as the default 'main' database. This database is used by Vlad when running automatic actions such as exporting or importing the database.
+
+## Importing Your Database
+
+When you destroy a Vlad box a trigger will automatically export the main database to a file calle vlad_destroy.sql.gz in the vlad_aux/db_io directory. This database dump can be automatically imported back into the main database when the box is started by using the _db_import_up_ variable. By default this action is turned off, but it can be turned on if needed. This can be turned on with a simple 'true' value, which will import the same file into the main database.
+
+This value can also be set to be the name of the file in the vlad_aux/db_io directory. In this instance the default file is ignored in favour of the given filename, which is imported into the main database.
+
+_Note_: The automatic database import won't occur if the main database currently has tables. This is in order to prevent data loss.
+
 
 ## Sequel Pro (OS X)
 
