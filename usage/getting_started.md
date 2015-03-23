@@ -22,7 +22,9 @@ With the settings.yml file in place you can get up and running using the followi
 
 Setting up the box takes a few minutes but there is plenty out output to look at whilst Ansible runs through the provisioning steps. You can see the webroot of the Vagrant box by going to the address [www.drupal.local](http://www.drupal.local/). A local Ansible action will add an entry to your hosts file for the default IP address 192.168.100.100 so you don't need to alter it.
 
-Note: You will be asked for your sudo password on two separate occasions. The first is used by Vagrant to setup a NFS share and the second is used by Ansible to alter your local hosts file so that you can easily access the box via a web browser.
+Notes:
+1. *On a Linux/OSX host, you will be asked for your sudo password on two separate occasions. The first is used by Vagrant to setup a NFS share and the second is used by Ansible to alter your local hosts file so that you can easily access the box via a web browser.*
+2. *On a Windows host, you will be asked for administrator username and password, in order to setup the aux synced folder. You can skip this prompt if you inform smb_username and smb_password values in the [settings file](settings_file.md)*
 
 To access the vagrant box use the following command:
 
