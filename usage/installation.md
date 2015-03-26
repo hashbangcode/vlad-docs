@@ -1,4 +1,4 @@
-<h1>Installation</h1>
+# Installation
 
 This page talks you through installing the components needed to get up and running with Vlad.
 
@@ -6,32 +6,19 @@ This page talks you through installing the components needed to get up and runni
 
 Vlad has a number of prerequisites that need to be met before things will work correctly.
 
-- Vagrant 1.4+
+- Vagrant 1.6.4+
 - If you are using VirtualBox as your virtual machine provider then you will need VirtualBox 4.3+
-- The vagrant-triggers plugin.
-- Ansible 1.6+
+- If you are not on Windows, you will need to install Ansible 1.6+
 
 Vlad has been tested as working on Linux, OS X platforms, and Windows~~, but Windows is currently unsupported~~. Vlad has been tested with the VirtualBox and VMware Fusion providers and as such other providers are currently not supported.
 
-### Vagrant
-
-Vagrant 1.4+ comes with the Ansible provisioning tool included so there is no need to install extra plugins. If you have installed the Ansible plugin separately then you may find that Vlad doesn't build correctly.
-
-The vagrant-triggers plugin is used to run certain actions during the up, halt and destroy actions in Vagrant. This plugin is a requirement of Vlad and must be installed. You can install it with the following command.
-
-    vagrant plugin install vagrant-triggers
-
-You can also install the vagrant-cachier plugin in order to cache apt-get and gem requests, which speeds up reprovisioning. This isn't a requirement but can vastly reduce the amount of time it takes to recreate a machine. You can install this plugin with the following command.
-
-    vagrant plugin install vagrant-cachier
-
-If you already have the needed elements then you can get started.
-
 ### Ansible
 
-Ansible is the provisioning system that Vlad uses.
+Ansible is the provisioning system that Vlad uses. 
 
-To install Ansible use the following commands:
+You don't need to install if you are using Vlad on Windows.
+
+To install Ansible in Linux or OS X, use the following commands:
 
     sudo easy_install pip
     sudo pip install ansible
@@ -47,7 +34,9 @@ When you first download Vlad you will be unable to do anything with it as the sy
 Out of the box you will get the following options:
 
     webserver_hostname: 'drupal.local'
-    webserver_hostname_alias: 'www.{{ webserver_hostname }}'
+    webserver_hostname_aliases: 
+    - 'www.drupal.local'
+    #  - 'www.example.com'
 
     # Vagrantfile configuration
 
@@ -56,16 +45,8 @@ Out of the box you will get the following options:
 
 This will create a box called "vlad_vlad" in your VirtualBox interface. If you were to change the boxname to "nosferatu" then the box name would be "nosferatu_vlad". This allows you to see at a glance what projects you have in VirtualBox that are derived from Vlad.
 
+In order to support multiple projects, or a Drupal multi-site installation, you can add your own server aliases. These aliases will be added to your local hosts file when Vlad fires up the VMs, and removed from there upon Vlad halt. 
+
 ### Gotchas:
 
-#### vagrant-cachier dependencies (nokogiri)
-
-If you find an error about installing nokogiri whilst installing vagrant-cachier then you can get around this by installing nokogiri separately. First, you'll need to install some dependencies:
-
-    sudo apt-get install ruby-dev ruby-libxml libxml2-dev libxslt1-dev
-    
-Next, to install nokogiri you need to use the system libraries, like this:
-
-    sudo gem install nokogiri --use-system-libraries
-
-However, you only need to run the above steps to install nokogiri if you can't install vagrant-cachier normally.
+Note that, if you have installed the Ansible plugin separately, you may find that Vlad doesn't build correctly.
