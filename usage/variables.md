@@ -418,7 +418,7 @@ default value: ""
 
 __drush_make_force__
 
-Run drush make *every* time the VM is provisioned. Setting to false will only run drush make if a make file has been specified and docroot is empty (if modules directory is not present).
+Run drush make *every* time the VM is provisioned. Setting to false will only run drush make if a make file has been specified and docroot does not contain an existing Drupal codebase.
 
 default value: false
 
