@@ -10,11 +10,12 @@ The hostname of the site you are about to create. By default this is then combin
 
 default value: 'drupal.local'
 
-__webserver_hostname_alias__
+__webserver_hostname_aliases__
 
-This is the fully qualified name of the server.
+In order to support multiple projects, or Drupal multi-site installations, this lets you add a list of fully qualified names for your web server aliases.
 
-default value: 'www.{{ webserver_hostname }}'
+default value: 
+- 'www.drupal.local'
 
 ## Vagrantfile configuration
 
