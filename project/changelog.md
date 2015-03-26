@@ -1,5 +1,9 @@
 <h1>Change log</h1>
 
+## Dev
+
+- Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
+
 ## Version 1.0.4
 
 - PECL uploadprogress no longer installed by default
@@ -21,7 +25,6 @@
 - Fixed some wonky yaml syntax - now using proper structured maps.
 - Fixed odd issue with ports test failing with default values.
 - Less software installed by default. A previous similar commit only amended example.settings.yml - this commit changes the actual default variable values.
-
 
 ## Version 1.0.2
 

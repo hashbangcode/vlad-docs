@@ -291,7 +291,7 @@ __apc_num_files_hint__
 
 default value: '0'
 
-##  MySQL
+## MySQL
 
 __mysql_port__
 
@@ -359,7 +359,7 @@ __skip_name_resolve__
 
 default value: true
 
-##  SSH
+## SSH
 
 __ssh_port__
 
@@ -378,7 +378,7 @@ Options include:
 
 default value: false
 
-##  Varnish
+## Varnish
 
 __varnish_memory__
 
@@ -393,6 +393,33 @@ __redis_port__
 Sets the port Redis should listen on.
 
 default value: 6379
+
+## Drush make
+
+__drush_make_file__
+
+The name of the make file that is to be run.
+Vlad expects this file to be placed in a subdirectory called "make" within your vlad_aux directory.
+E.g. "vlad_example_d7.make"
+Drush make will not be run if no file is specified.
+
+default value: ""
+
+__drush_make_options__
+
+Options to pass to drush make command.
+E.g. "--prepare-install"
+See http://www.drushcommands.com/drush-6x/make/make for possible options.
+
+default value: ""
+
+__drush_make_force__
+
+Run drush make *every* time the VM is provisioned.
+Setting to false will only run drush make if a make file has been specified and docroot is empty (if modules directory is not present).
+
+default value: false
+
 
 ## Other settings
 
