@@ -21,7 +21,7 @@ Possible tags are:
 - adminer
 - apache
 - aptget
-- drupalinstall
+- drupal_install
 - drush
 - drush_make
 - imagemagick
