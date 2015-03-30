@@ -104,6 +104,12 @@ Installs Apache server.
 
 default value: true
 
+__bling_install__
+
+Adds bling.
+
+default value: true
+
 __imagemagick_install__
 
 Installs Imagemagick as well as the PHP extension.
@@ -422,6 +428,13 @@ Run drush make *every* time the VM is provisioned. Setting to false will only ru
 
 default value: false
 
+## Bling
+
+__bling_shell_prompt__
+
+Tweaks shell prompt.
+
+default value: true
 
 ## Other settings
 
