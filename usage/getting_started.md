@@ -30,8 +30,6 @@ To access the vagrant box use the following command:
 
     vagrant ssh
 
-To install Drupal 7 on the box log in (using 'vagrant ssh') and run the script /var/www/drupal7_install.sh. To clone the latest version of Drupal 8 and install you can run the script /var/www/drupal8_install.sh. The admin username for both Drupal installs is 'admin' and the password is 'password'.
-
 If you have changed any of the settings and want to re-provision the box then run the following command:
 
     vagrant provision
@@ -49,6 +47,15 @@ To delete the box and the data it contains run the following command:
     vagrant destroy
 
 When you run 'vagrant up' again you will get back the original box.
+
+## Drupal install scripts
+
+Vlad comes with a handful of scripts to make installing various versions of Drupal quick & easy. To use any of the install scripts you'll need to SSH into the box (`vagrant ssh`) and then run the relevant script for the version of Drupal you'd like to install (see list below). The admin username for all Drupal installs is 'admin' and the password is 'password'.
+
+- Drupal 6: `/var/www/drupal6_install.sh`
+- Drupal 7: `/var/www/drupal7_install.sh`
+- Drupal 8 (latest stable): `/var/www/drupal8_install.sh`
+- Drupal 8 (current dev): `/var/www/drupal8dev_install.sh`
 
 ## Additional
 
