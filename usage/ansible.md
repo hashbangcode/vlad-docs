@@ -23,6 +23,7 @@ Possible tags are:
 - aptget
 - drupal_install
 - drush
+- drush_aliases
 - drush_make
 - imagemagick
 - local
