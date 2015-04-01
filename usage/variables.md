@@ -486,7 +486,7 @@ Setting to true will assemble all alias/aliases files into a single group aliase
 
 Setting to false will copy alias/aliases files to the guest without assembling or renaming.
 
-default value: true
+default value: false
 
 ## Git config user credentials
 
