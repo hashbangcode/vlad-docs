@@ -14,7 +14,7 @@ __webserver_hostname_aliases__
 
 In order to support multiple projects, or Drupal multi-site installations, this lets you add a list of fully qualified names for your web server aliases.
 
-default value: 
+default value:
 - 'www.drupal.local'
 
 ## Vagrantfile configuration
@@ -363,6 +363,17 @@ default value: utf8_general_ci
 
 __skip_name_resolve__
 
+default value: true
+
+__mysql_hosts__
+
+A list of hosts that MySQL should map to databases to allow access.
+
+default value: ['{{ local_ipv4_address.ansible_facts.ansible_default_ipv4.address }}', '127.0.0.1', 'localhost']
+
+__mysql_allow_all_hosts__
+
+Whether to allow all hosts (0.0.0.0) or a specific IP address (which is taken from the boxipaddress variable)
 default value: true
 
 ## SSH
