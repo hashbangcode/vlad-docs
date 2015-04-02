@@ -44,3 +44,4 @@ pages:
 - ['project/thanks.md', 'Project', 'Thanks']
 - ['project/changelog.md', 'Project', 'Change log']
 - ['project/licence.md', 'Project', 'Licence']
+- ['project/version_release.md', 'Project', 'Version Release']

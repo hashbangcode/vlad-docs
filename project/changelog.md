@@ -1,6 +1,6 @@
 <h1>Change log</h1>
 
-## Dev
+## Version 1.1.0-Dev
 
 - Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
 
