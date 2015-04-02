@@ -3,6 +3,7 @@
 ## Version 1.1.0-Dev
 
 - Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
+- Added automated testing support via Travis CI.
 
 ## Version 1.0.4
 
