@@ -2,6 +2,13 @@
 
 ## Version 1.1.0-Dev
 
+### BREAKING CHANGES
+
+- Multisite support. `webserver_hostname_alias` is now `webserver_hostname_aliases` and expects an array. See [Variables - Webserver](../usage/variables.md#webserver).
+- Support for multiple databases. `dbname` now expects an array. See [Variables - MySQL](../usage/variables.md#mysql).
+
+### Non-breaking changes
+
 - Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
 - Added automated testing support via Travis CI.
 

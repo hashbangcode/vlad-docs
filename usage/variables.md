@@ -473,13 +473,15 @@ default value: true
 
 __db_import_up__
 
-Import MySQL database from file on 'vagrant up'.
+Import MySQL databases from files on 'vagrant up'.
+
+Database import won't occur if the first present database has any tables defined (in order to prevent data loss).
 
 Options include:
 
-- false          - don't import anything
-- true          - import from vlad_aux/db_io/vlad_up.sql.gz
-- "[filename]" - import from vlad_aux/db_io/[filename] (supports .sql, .bz2 and .gz files)
+- `false` - don't import anything
+- `true` - import from vlad_aux/db_io/vlad_up.sql.gz
+- `["path_to_file","path_to_file"]` - import from vlad_aux/db_io/[path_to_file]. Requires an entry for each database specified in `dbname`. Supports .sql, .bz2 and .gz files.
 
 default value: false
 
