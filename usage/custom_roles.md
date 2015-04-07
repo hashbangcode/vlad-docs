@@ -88,8 +88,8 @@ The custom role will be run as part of `vlad/playbooks/site_custom.yml`, _after_
 
 You can run the tasks in your custom role without Vagrant in the same way that you can with Vlad's main Ansible playbook. Just make sure you call the correct playbook (this command presumes that you're currently in the same directory as Vlad's Vagrantfile):
 
-    ansible-playbook vlad/playbooks/site_custom.yml
+    ansible-playbook -i vlad/host.ini --private-key=~/.vagrant.d/insecure_private_key vlad/playbooks/site_custom.yml
 
 Similarly, you can narrow the focus of this command to run only specific tags that you've defined within your custom role:
 
-    ansible-playbook vlad/playbooks/site_custom.yml -t tag_1,tag_2
+    ansible-playbook -i vlad/host.ini --private-key=~/.vagrant.d/insecure_private_key vlad/playbooks/site_custom.yml -t tag_1,tag_2

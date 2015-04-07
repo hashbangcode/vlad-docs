@@ -4,17 +4,13 @@ Ansible is an automation and provisioning tool that makes it easy to configure s
 
 ## Running Ansible separately from Vagrant
 
-During the setup process a file called host.ini will be created in the main Vlad directory. This file contains all the information Ansible needs to interact with the Vagrant box. If you want to run the Ansible playbook outside of Vagrant you can run the following command.
+During the setup process a file called host.ini will be created in the main Vlad directory. This file contains all the information Ansible needs to interact with the Vagrant box. If you want to run the Ansible playbook outside of Vagrant you can run the following command:
 
-    ansible-playbook -i vlad/host.ini vlad/playbooks/site.yml --private-key=~/.vagrant.d/insecure_private_key
+    ansible-playbook -i vlad/host.ini --private-key=~/.vagrant.d/insecure_private_key vlad/playbooks/site.yml
 
-Tags have been included in the playbooks to allow different parts to be run individually. For example to (re)run the varnish playbook use the following command.
+Tags have been included in the playbooks to allow groups of tasks to be run in isolation. For example to re-run the varnish & apache related tasks use the following command (note the `-t` option towards the end):
 
-    ansible-playbook -i vlad/host.ini vlad/playbooks/site.yml --private-key=~/.vagrant.d/insecure_private_key -t varnish
-
-To run multiple tags just use a comma separated list of tags like this:
-
-    ansible-playbook -i vlad/host.ini vlad/playbooks/site.yml --private-key=~/.vagrant.d/insecure_private_key -t varnish,apache
+    ansible-playbook -i vlad/host.ini --private-key=~/.vagrant.d/insecure_private_key vlad/playbooks/site.yml -t varnish,apache
 
 Possible tags are:
 
