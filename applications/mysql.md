@@ -18,7 +18,7 @@ When you halt or destroy a VM, Vlad will attempt to automatically export all dat
 
 ## Importing databases
 
-Database dumps can be automatically imported when the box is provisioned by using the [db_import_up](../usage/variables.md#other-settings) variable. By default this action is disabled. This functionality can be re-run in isolation (on a previously provisioned VM) using the `mysql_import` [Ansible](../usage/ansible.md) tag.
+Database dumps can be automatically imported when the box is provisioned by using the [db_import_up](../usage/variables.md#mysql) variable. By default this action is disabled. This functionality can be re-run in isolation (on a previously provisioned VM) using the `mysql_import` [Ansible](../usage/ansible.md) tag.
 
 ## Connecting MySQL GUI apps
 

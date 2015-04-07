@@ -335,6 +335,20 @@ The password for the database user.
 
 default value: wibble
 
+__db_import_up__
+
+Import MySQL databases from files on 'vagrant up'.
+
+Database import won't occur if the first present database has any tables defined (in order to prevent data loss).
+
+Options include:
+
+- `false` - don't import anything
+- `true` - import from files within vlad_aux/db_io/halt_destroy/ - source filenames will need to correspond with values in `dbname`.
+- `["path_to_file","path_to_file"]` - import from vlad_aux/db_io/[path_to_file]. Requires an entry for each database specified in `dbname`. Supports .sql, .bz2 and .gz files.
+
+default value: false
+
 ### MySQL my.cnf
 
 __mysql_max_allowed_packet__
@@ -470,20 +484,6 @@ __hosts_file_update__
 Select whether Vlad should edit the hosts file.
 
 default value: true
-
-__db_import_up__
-
-Import MySQL databases from files on 'vagrant up'.
-
-Database import won't occur if the first present database has any tables defined (in order to prevent data loss).
-
-Options include:
-
-- `false` - don't import anything
-- `true` - import from files within vlad_aux/db_io/halt_destroy/ - source filenames will need to correspond with values in `dbname`.
-- `["path_to_file","path_to_file"]` - import from vlad_aux/db_io/[path_to_file]. Requires an entry for each database specified in `dbname`. Supports .sql, .bz2 and .gz files.
-
-default value: false
 
 __add_index_file__
 
