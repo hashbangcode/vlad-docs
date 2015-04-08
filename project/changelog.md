@@ -6,11 +6,21 @@
 
 - Multisite support. `webserver_hostname_alias` is now `webserver_hostname_aliases` and expects an array. See [Variables - Webserver](../usage/variables.md#webserver).
 - Support for multiple databases. `dbname` now expects an array. See [Variables - MySQL](../usage/variables.md#mysql).
+- Vlad requires Vagrant 1.6.4 or higher (Vlad will check).
+- Automatic database dumps now reside in vlad_aux/db_io/halt_destroy and are named after each database.
+- Optional automatic database import now points at vlad_aux/db_io/halt_destroy if set to `true`.
 
 ### Non-breaking changes
 
 - Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
 - Added automated testing support via Travis CI.
+- Vlad automatically installs required Vagrant plugins.
+- Local hosts file now managed by vagrant-hostsupdater plugin.
+- Increased stability now that vlad/host.ini is only used as an Ansible inventory.
+- Automatic database dumps on halt/destroy now work again.
+- Amends to how Ansible playbooks need to be run if used separately from Vagrant. See [Ansible](../usage/ansible.md).
+- Drush backups now relocated to vlad_aux/drush_backups.
+- Drush dumps now relocated to vlad_aux/db_io/drush_dumps.
 
 ## Version 1.0.4
 
