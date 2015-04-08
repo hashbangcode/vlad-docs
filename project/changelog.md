@@ -23,6 +23,8 @@
 - Drush dumps now relocated to vlad_aux/db_io/drush_dumps.
 - Added Drupal 6 install script.
 - Drush alias support. See [Variables - Other settings](../usage/variables.md#other-settings).
+- More idempotent Ansible plays.
+- Now using Drush's example .drush_bashrc file by default (`dr` & `dssh` FTW!).
 
 ## Version 1.0.4
 
