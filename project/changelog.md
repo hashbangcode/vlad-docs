@@ -21,6 +21,8 @@
 - Amends to how Ansible playbooks need to be run if used separately from Vagrant. See [Ansible](../usage/ansible.md).
 - Drush backups now relocated to vlad_aux/drush_backups.
 - Drush dumps now relocated to vlad_aux/db_io/drush_dumps.
+- Added Drupal 6 install script.
+- Drush alias support. See [Variables - Other settings](../usage/variables.md#other-settings).
 
 ## Version 1.0.4
 
