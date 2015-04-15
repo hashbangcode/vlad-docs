@@ -25,6 +25,12 @@
 - Drush alias support. See [Variables - Other settings](../usage/variables.md#other-settings).
 - More idempotent Ansible plays.
 - Now using Drush's example .drush_bashrc file by default (`dr` & `dssh` FTW!).
+- Now running syntax checking and minimal testing with Travis.ci.
+- Reworked the Vagrantfile file in order to be more maintainable.
+- Updated the default index.php file.
+- Vlad now supports Windows.
+- Added a script caleld vlad-play.sh in order to help run Ansible tasks on the Vlad box.
+- Various small tweaks, fixes, corrections, and optimisations.
 
 ## Version 1.0.4
 
