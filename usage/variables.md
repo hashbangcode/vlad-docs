@@ -77,6 +77,12 @@ Amount of memory to be allocated to the guest VM from the host machine. This can
 
 default value: '1024'
 
+__parallels_update_guest_tools__
+
+Whether the `vagrant-parallels` plugin should update the Guest Tools in the VM automatically.
+
+default value: false
+
 ## Components to install
 
 The server components that will be installed when the box is provisioned.
