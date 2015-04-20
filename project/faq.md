@@ -21,3 +21,4 @@ If you are sure that the problem is not related to Vlad then the Vagrant issue t
 ## I'm interested in helping out, where can I find more information?
 
 Your support is welcome! Take a look at the [contributing](contributing/contributing) page for more guidance. :)
+You can also provide your support in testing, and updating this documentation site.

@@ -1,6 +1,6 @@
 <h1>Vlad Installed Applications</h1>
 
-Vlad can install the following technologies:
+Vlad can install the following technologies (links in this list go to additional help pages in these docs):
 
 - Apache2
 - Adminer

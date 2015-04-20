@@ -34,10 +34,14 @@
     </g>
 </svg>
 
-Vlad stands for <u>V</u>agrant <u>L</u>AMP with <u>A</u>nsible and <u>D</u>rupal and is a development environment 
+Vlad stands for <u>V</u>agrant <u>L</u>AMP with <u>A</u>nsible and <u>D</u>rupal and is a development environment
 that is easy to setup and has a number of features that make it useful for Drupal projects.
 
 Vlad is designed to be a stand alone environment that provides all of the tools you need to develop Drupal sites as well as being flexable enough for you to set it up exactly how you need it.
+
+How to get Vlad:
+- [From the Vlad GitHub repo.](https://github.com/hashbangcode/vlad)
+- [Download Vlad directly](https://github.com/hashbangcode/vlad/archive/master.zip)
 
 Vlad includes the following technologies:
 

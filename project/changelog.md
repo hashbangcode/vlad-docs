@@ -1,5 +1,37 @@
 <h1>Change log</h1>
 
+## Version 1.1.0-Dev
+
+### BREAKING CHANGES
+
+- Multisite support. `webserver_hostname_alias` is now `webserver_hostname_aliases` and expects an array. See [Variables - Webserver](../usage/variables.md#webserver).
+- Support for multiple databases. `dbname` now expects an array. See [Variables - MySQL](../usage/variables.md#mysql).
+- Vlad requires Vagrant 1.6.4 or higher (Vlad will check).
+- Automatic database dumps now reside in vlad_aux/db_io/halt_destroy and are named after each database.
+- Optional automatic database import now points at vlad_aux/db_io/halt_destroy if set to `true`.
+
+### Non-breaking changes
+
+- Drush make support. See [Variables - Drush make](../usage/variables.md#drush-make).
+- Added automated testing support via Travis CI.
+- Vlad automatically installs required Vagrant plugins.
+- Local hosts file now managed by vagrant-hostsupdater plugin.
+- Increased stability now that vlad/host.ini is only used as an Ansible inventory.
+- Automatic database dumps on halt/destroy now work again.
+- Amends to how Ansible playbooks need to be run if used separately from Vagrant. See [Ansible](../usage/ansible.md).
+- Drush backups now relocated to vlad_aux/drush_backups.
+- Drush dumps now relocated to vlad_aux/db_io/drush_dumps.
+- Added Drupal 6 install script.
+- Drush alias support. See [Variables - Other settings](../usage/variables.md#other-settings).
+- More idempotent Ansible plays.
+- Now using Drush's example .drush_bashrc file by default (`dr` & `dssh` FTW!).
+- Now running syntax checking and minimal testing with Travis.ci.
+- Reworked the Vagrantfile file in order to be more maintainable.
+- Updated the default index.php file.
+- Vlad now supports Windows.
+- Added a script caleld vlad-play.sh in order to help run Ansible tasks on the Vlad box.
+- Various small tweaks, fixes, corrections, and optimisations.
+
 ## Version 1.0.4
 
 - PECL uploadprogress no longer installed by default
@@ -21,7 +53,6 @@
 - Fixed some wonky yaml syntax - now using proper structured maps.
 - Fixed odd issue with ports test failing with default values.
 - Less software installed by default. A previous similar commit only amended example.settings.yml - this commit changes the actual default variable values.
-
 
 ## Version 1.0.2
 

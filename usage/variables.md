@@ -10,11 +10,12 @@ The hostname of the site you are about to create. By default this is then combin
 
 default value: 'drupal.local'
 
-__webserver_hostname_alias__
+__webserver_hostname_aliases__
 
-This is the fully qualified name of the server.
+In order to support multiple projects, or Drupal multi-site installations, this lets you add a list of fully qualified names for your web server aliases.
 
-default value: 'www.{{ webserver_hostname }}'
+default value:
+- 'www.drupal.local'
 
 ## Vagrantfile configuration
 
@@ -54,6 +55,7 @@ default value: "./vlad_aux"
 
 __synced_folder_type__
 
+*Only applicable for when running VLAD on a non-Windows host.*
 Use 'nfs' or 'rsync' for VM file editing in synced folder.
 
 default value: 'nfs'
@@ -99,6 +101,12 @@ default value: true
 __apache_install__
 
 Installs Apache server.
+
+default value: true
+
+__bling_install__
+
+Adds bling.
 
 default value: true
 
@@ -289,7 +297,7 @@ __apc_num_files_hint__
 
 default value: '0'
 
-##  MySQL
+## MySQL
 
 __mysql_port__
 
@@ -305,15 +313,41 @@ default value: vlad
 
 __dbname__
 
-default value: vladdb
+This is a list of databases that Vlad will generate. As a default a single database is created but this value can be changed to make Vlad add more databases. The following setting will generate two databases, one called 'database1' and the other called 'database2'.
+
+    dbname: ['database1', 'database2']
+
+Each database has the same access privileges.
+
+It should be noted that the first database in this list is always used as the default database. This database is used by Vlad when running automatic actions such as exporting or importing the database.
+
+default value: ['vladdb']
 
 __dbuser__
+
+The user that will be created for the databases.
 
 default value: vlad
 
 __dbpass__
 
+The password for the database user.
+
 default value: wibble
+
+__db_import_up__
+
+Import MySQL databases from files on 'vagrant up'.
+
+Database import won't occur if the first present database has any tables defined (in order to prevent data loss).
+
+Options include:
+
+- `false` - don't import anything
+- `true` - import from files within vlad_aux/db_io/halt_destroy/ - source filenames will need to correspond with values in `dbname`.
+- `["path_to_file","path_to_file"]` - import from vlad_aux/db_io/[path_to_file]. Requires an entry for each database specified in `dbname`. Supports .sql, .bz2 and .gz files.
+
+default value: false
 
 ### MySQL my.cnf
 
@@ -345,7 +379,18 @@ __skip_name_resolve__
 
 default value: true
 
-##  SSH
+__mysql_hosts__
+
+A list of hosts that MySQL should map to databases to allow access.
+
+default value: ['{{ local_ipv4_address.ansible_facts.ansible_default_ipv4.address }}', '127.0.0.1', 'localhost']
+
+__mysql_allow_all_hosts__
+
+Whether to allow all hosts (0.0.0.0) or a specific IP address (which is taken from the boxipaddress variable)
+default value: true
+
+## SSH
 
 __ssh_port__
 
@@ -354,7 +399,7 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase. 
+Does not support identites that require a passphrase.
 
 Options include:
 
@@ -364,7 +409,7 @@ Options include:
 
 default value: false
 
-##  Varnish
+## Varnish
 
 __varnish_memory__
 
@@ -379,6 +424,42 @@ __redis_port__
 Sets the port Redis should listen on.
 
 default value: 6379
+
+## Drush make
+
+__drush_make_file__
+
+The name of the make file that is to be run. Vlad expects this file to be placed in a subdirectory called "make" within your vlad_aux directory.
+
+E.g. "vlad_example_d7.make"
+
+Drush make will not be run if no file is specified.
+
+default value: ""
+
+__drush_make_options__
+
+Options to pass to drush make command.
+
+E.g. "--prepare-install"
+
+See http://www.drushcommands.com/drush-6x/make/make for possible options.
+
+default value: ""
+
+__drush_make_force__
+
+Run drush make *every* time the VM is provisioned. Setting to false will only run drush make if a make file has been specified and docroot does not contain an existing Drupal codebase.
+
+default value: false
+
+## Bling
+
+__bling_shell_prompt__
+
+Tweaks shell prompt.
+
+default value: true
 
 ## Other settings
 
@@ -404,23 +485,21 @@ Select whether Vlad should edit the hosts file.
 
 default value: true
 
-__db_import_up__
-
-Import MySQL database from file on 'vagrant up'. 
-
-Options include:
-
-- false          - don't import anything
-- true          - import from vlad_aux/db_io/vlad_up.sql.gz
-- "[filename]" - import from vlad_aux/db_io/[filename] (supports .sql, .bz2 and .gz files)
-
-default value: false
-
 __add_index_file__
 
 Add the default index.php file (useful to turn off if you are going git clone into the web root folder). Vlad will also not overwrite any existing index.php file present in the docroot location.
 
 default value: true
+
+__drush_aliases_assemble__
+
+Drush alias files can be placed in either of Vlad's settings directories. See http://vlad-docs.readthedocs.org/en/latest/usage/settings_file
+
+Setting to true will assemble all alias/aliases files into a single group aliases file prefixed with the boxname.
+
+Setting to false will copy alias/aliases files to the guest without assembling or renaming.
+
+default value: false
 
 ## Git config user credentials
 
