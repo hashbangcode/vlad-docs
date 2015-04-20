@@ -1,6 +1,6 @@
 <h1>Change log</h1>
 
-## Version 1.1.0-Dev
+## Version 1.1.0
 
 ### BREAKING CHANGES
 
@@ -29,7 +29,7 @@
 - Reworked the Vagrantfile file in order to be more maintainable.
 - Updated the default index.php file.
 - Vlad now supports Windows.
-- Added a script caleld vlad-play.sh in order to help run Ansible tasks on the Vlad box.
+- Added a script called vlad-play.sh in order to help run Ansible tasks on the Vlad box.
 - Various small tweaks, fixes, corrections, and optimisations.
 
 ## Version 1.0.4
