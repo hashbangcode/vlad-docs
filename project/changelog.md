@@ -1,6 +1,6 @@
 <h1>Change log</h1>
 
-## Version 1.1.0-Dev
+## Version 1.1.0
 
 ### BREAKING CHANGES
 
