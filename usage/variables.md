@@ -453,6 +453,14 @@ Run drush make *every* time the VM is provisioned. Setting to false will only ru
 
 default value: false
 
+__drush_structure_tables__
+
+Sets the tables to be skipped in the "$options['structure-tables']['common']" config variable in the .drushrc.php file. Allows you to run drush database dump commands using the --structure-tables-key parameter to skip certain table data like caches and session data. For example, to export the database and skip those tables you would run the following command.
+
+    drush sql-dump --structure-tables-key=common --gzip --result-file=dump.sql
+
+default value: "['cache','cache_filter','cache_menu','cache_page','history','sessions','watchdog','cache_admin_menu','cache_block','cache_field','cache_form','cache_path','cache_token','cache_update','cache_views','cache_views_data','ctools_css_cache','ctools_object_cache','search_dataset','search_index','search_node_links','search_total']"
+
 ## Bling
 
 __bling_shell_prompt__
