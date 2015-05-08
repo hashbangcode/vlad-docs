@@ -1,5 +1,14 @@
 <h1>Change log</h1>
 
+## Version 1.1.1
+
+- Fixed (#213) a bug with Solr role in Ansible 1.9.x+.
+- Some tweaks to the vlad-play.sh script to make it more reliable (#214).
+- Allowed default and root user in MySQL to have GRANT privileges (#218).
+- Tweaked the MySQL role slightly to make it more reliable.
+- Added a minimum Ansible version check (set to 1.8.4).
+- Added drush_structure_tables variable to allow default table skipping functionality with sql-dump.
+
 ## Version 1.1.0
 
 ### BREAKING CHANGES
