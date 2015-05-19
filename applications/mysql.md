@@ -49,3 +49,10 @@ Choose connection type "SSH" and complete the connection details as follows:
 As above - the values go in the following dialog:
 
 ![Vlad MySQL Workbench Settings](img/mysql-workbench-settings.png)
+
+### MySQL Permissions
+
+For remote access over SSH, you need to adjust the permissions for users from 127.0.0.1 (instead of just from 'localhost') on the MySQL database.
+i.e: grant all privileges on foo.* to root@127.0.0.1 identified by 'rootpassword';
+
+

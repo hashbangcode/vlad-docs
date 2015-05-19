@@ -25,7 +25,7 @@ The Xdebug profiler needs to be activated by passing the XDEBUG_PROFILE variable
 
 ## Debugging Drush Commands
 
-If you want to use Xdebug with Drush commands, you must place drush into the docroot of the project, and set the following linux variables
+If you want to use Xdebug with Drush commands, you must place drush into the docroot of the project and set the following linux variables (run the following in terminal):
 
 export PHP_IDE_CONFIG="serverName=drupal.local"
 export XDEBUG_CONFIG="idekey=PHPSTORM remote_host=192.168.100.1 remote_port=9000"
