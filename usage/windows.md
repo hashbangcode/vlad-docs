@@ -6,6 +6,10 @@ Vlad now supports Windows, but there are a number of additional requirements.
 - Administrator privileges are required to run vagrant commands on a Windows host.
 - .NET Framework 4 or higher
 - Windows Management Framework 3.0 (PowerShell 3) for versions of Windows under 8.1.
+- For Windows 8.1 (probably 8 too), to get fully working Vagrant SMB share, you need to be sure your system path variable contain:
+  - C:\Windows\system32 (for command 'net share')
+  - C:\Windows\System32\WindowsPowerShell\v1.0 (for command 'powershell')
+  - Path to Windows SSH client provided by Cygwin, MinGW or Git (ex: C:\Program Files (x86)\Git\bin)
 
 PowerShell 3 was installed after installing Windows Management Framework 3.0 and rebooting.
 
