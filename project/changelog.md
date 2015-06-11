@@ -1,5 +1,17 @@
 <h1>Change log</h1>
 
+## Version 1.1.2
+
+- Tweaks and fixes to the MySQL role, now more stable.
+- Set skip_name_resolve to false as a default in MySQL.
+- Sorted out PHP tags within PHP role.
+- Added max_input_vars and max_input_time parameters to PHP config.
+- Added a task to ensure loose permissions on /tmp directory.
+- Removed some duplicate tasks.
+- No longer using UPD as transport for NFS (#216).
+- Increased xdeub.max_nesting_level for Drupal 8 requirement.
+- Added MySQL connections for root user from 127.0.0.1.
+
 ## Version 1.1.1
 
 - Fixed (#213) a bug with Solr role in Ansible 1.9.x+.
