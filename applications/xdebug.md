@@ -22,3 +22,10 @@ The Xdebug profiler needs to be activated by passing the XDEBUG_PROFILE variable
 - On the host machine start your debug Listener with default settings. This should use port 9000 and the guest box IP address. The IDE Key does not matter for some IDE's, but PHPStorm likes to have a known IDE key.
 - Request any page with a query string like http://www.drupal.local?XDEBUG_SESSION_START=foo. The value 'foo' does not matter - all values will cause PHP in the virtual machine to connect to the host. If you are running PHPStorm then you can create a bookmarklet that will allow you to start the debugger from any page with the correct IDE key on the following page [https://www.jetbrains.com/phpstorm/marklets/](https://www.jetbrains.com/phpstorm/marklets/).
 - When your IDE receives a connection from the VM, it should prompt you to create a Path Mapping. This helps your IDE pull up an editable file instead of a read-only copy thats provided by XDebug.
+
+## Debugging Drush Commands
+
+If you want to use Xdebug with Drush commands, you must place drush into the docroot of the project and set the following linux variables (run the following in terminal):
+
+export PHP_IDE_CONFIG="serverName=drupal.local"
+export XDEBUG_CONFIG="idekey=PHPSTORM remote_host=192.168.100.1 remote_port=9000"
