@@ -399,13 +399,18 @@ default value: 22
 __use_host_id__
 
 Add RSA or DSA identity from host to guest on 'vagrant up'.
-Does not support identites that require a passphrase.
+Does not support identities that require a passphrase.
 
 Options include:
 
 - false         : don't add anything
 - true          : add default files  (~/.ssh/id_rsa, ~/.ssh/id_dsa & ~/.ssh/identity)
 - "[filename]"  : add a specific file e.g. /Users/username/.ssh/[filename]
+
+NOTE: In order for this to work correctly you also need to setup agent forwarding on your host machine. This is done by including the following into your ~/.ssh/config file. This assumes that you are keeping the default '.local' domains that come with Vlad.
+
+    Host *.local
+        ForwardAgent yes
 
 default value: false
 
