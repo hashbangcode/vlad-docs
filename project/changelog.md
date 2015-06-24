@@ -1,5 +1,9 @@
 <h1>Change log</h1>
 
+## Version 1.1.3
+- Update of the Solr version to allow for the change in version on the Solr mirrors (#232).
+- Added fix to allow the Vlad user to have greater access over local databases (#230).
+
 ## Version 1.1.2
 
 - Tweaks and fixes to the MySQL role, now more stable.
