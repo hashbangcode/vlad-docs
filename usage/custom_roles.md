@@ -21,15 +21,13 @@ Like the other roles that ship with Vlad it should follow the file structure tha
 
 ### Tasks
 
-Your custom role will need to contain a main tasks file at `tasks/main.yml`. Much like the roles included within Vlad, this file is the first place within your role that Ansible will look for tasks or includes to further files that may list tasks.
+Your custom role will need to contain a main tasks file at `tasks/main.yml`.  Much like the roles included within Vlad, this file is the first place within your role that Ansible will look for tasks or includes to further files that may list tasks.
 
 ### Variables
 
 All variables defined by Vlad and possibly overridden via Vlad's settings file will be available to the custom role.
 
-Vlad will check for an optional additional settings file for use with your custom role at the following location (relative to Vlad's Vagrantfile):
-
-    ../settings/vlad_custom_settings.yml
+Vlad will check for an optional additional settings file named "vlad_custom_settings.yml" for use with your custom role at any of the locations that you can store [Vlad's own settings file](settings_file.md).
 
 ### Example structure
 
@@ -48,7 +46,7 @@ demo-project/
 └── docroot/
 ```
 
-Below is a more comprehensive example file structure for a custom role, including where it sits in relation to Vlad's own codebase. This example includes role subdirectories for default variables, templates & handlers (entirely optional). This example also demonstrates where you should place any settings that you're custom may require (`vlad_custom_settings.yml`).
+Below is a more comprehensive example file structure for a custom role, including where it sits in relation to Vlad's own codebase. This example includes role subdirectories for default variables, templates & handlers (entirely optional). This example also demonstrates where you should place any settings that you're custom role may require (`vlad_custom_settings.yml`).
 
 ```
 demo-project/
