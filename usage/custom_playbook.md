@@ -16,7 +16,7 @@ Vlad provides the following variables to help you integrate a custom playbook as
  
 ### Implementation notes
 
-- Any custom playbook will always be run _before_ Vlad's main playbook.
+- Any custom playbook will always be run _after_ Vlad's main playbook.
 - Variables set within Vlad or in any of your settings files are not automatically passed to the custom playbook (these will need to be included from within the custom playbook should you want to access them).
 
 ### Running a custom playbook without Vagrant
