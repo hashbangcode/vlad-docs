@@ -12,6 +12,10 @@
     - Vlad handlers will _not_ be automatically made available to the custom playbook.
     - The custom playbook's name & location is completely flexible. 
 
+### Non-breaking changes
+
+- Fixed bug when using NPM (#223).
+
 ## Version 1.1.3
 
 - Update of the Solr version to allow for the change in version on the Solr mirrors (#232).
