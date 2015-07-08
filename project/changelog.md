@@ -1,6 +1,19 @@
 <h1>Change log</h1>
 
+## Version 1.1.4
+
+### ✝ BREAKING CHANGES ✝
+
+- Vlad's custom role feature has been upgraded to support a full custom playbook (therefore potentially supporting multiple roles). 
+    - See [Custom playbook](../usage/custom_playbook.md) for details.
+    - Settings files will need to be amended to use new variables.
+    - Existing custom roles will need to be amended to work as standalone playbooks.
+    - Vlad vars & settings will _not_ be automatically passed to the custom playbook.
+    - Vlad handlers will _not_ be automatically made available to the custom playbook.
+    - The custom playbook's name & location is completely flexible. 
+
 ## Version 1.1.3
+
 - Update of the Solr version to allow for the change in version on the Solr mirrors (#232).
 - Added fix to allow the Vlad user to have greater access over local databases (#230).
 
@@ -27,7 +40,7 @@
 
 ## Version 1.1.0
 
-### BREAKING CHANGES
+### ✝ BREAKING CHANGES ✝
 
 - Multisite support. `webserver_hostname_alias` is now `webserver_hostname_aliases` and expects an array. See [Variables - Webserver](../usage/variables.md#webserver).
 - Support for multiple databases. `dbname` now expects an array. See [Variables - MySQL](../usage/variables.md#mysql).
@@ -92,7 +105,7 @@
 
 ## Version 1.0
 
-### BREAKING CHANGES
+### ✝ BREAKING CHANGES ✝
 
 - Moved to using boolean values (`true`/`false`) for settings variables in place of `"y"`/`"n"` strings. This will cause Ansible to fail on existing installations until settings files are adapted accordingly.
 - Vlad's default operating system is now Ubuntu 14.04. Existing installations that require a different OS will need to specify that in their settings files using the `vlad_os` variable before re-provisioning. See [Variables](../usage/variables.md#vagrantfile-configuration).

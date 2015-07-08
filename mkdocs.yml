@@ -13,7 +13,7 @@ pages:
 - ['usage/getting_started.md', 'Usage', 'Getting started']
 - ['usage/settings_file.md', 'Usage', 'Settings file']
 - ['usage/ansible.md', 'Usage', 'Ansible']
-- ['usage/custom_roles.md', 'Usage', 'Custom roles']
+- ['usage/custom_playbook.md', 'Usage', 'Custom playbook']
 - ['usage/example_vlad_output.md', 'Usage', 'Example Vlad output']
 - ['usage/project_structure.md', 'Usage', 'Project structure']
 - ['usage/documentation.md', 'Usage', 'Documentation']
