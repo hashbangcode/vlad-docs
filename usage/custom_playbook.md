@@ -12,8 +12,10 @@ Vlad provides the following variables to help you integrate a custom playbook as
 |---|---|---|---|
 | `vlad_custom_play` | Boolean | false | Determines whether the custom playbook will run when Vlad provisions the VM. |
 | `vlad_custom_play_path` | String  | "../vlad_custom/" | Relative path to the directory that contains the custom playbook (relative to Vlad's Vagrantfile). Note the closing backslash. |
-| `vlad_custom_playfile`  | String | "provision.yml" | Name of the YAML file to run within the custom playbook (including extension). |
- 
+| `vlad_custom_play_file`  | String | "provision.yml" | Name of the YAML file to run within the custom playbook (including extension). |
+
+To start using custom playbooks just include the variable 'vlad_custom_play' in your settings file and set it to 'true'. Vlad will automatically look for the file provision.yml in the directory 'vlad_custom', located above your Vagrantfile location.
+
 ### Implementation notes
 
 - Any custom playbook will always be run _after_ Vlad's main playbook.
