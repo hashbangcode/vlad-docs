@@ -390,6 +390,30 @@ __mysql_allow_all_hosts__
 Whether to allow all hosts (0.0.0.0) or a specific IP address (which is taken from the boxipaddress variable)
 default value: true
 
+__mysql_slow_query_log_status__
+
+This sets the MySQL slow query log status. Turn on with 1, turn off with 0.
+
+default value : 0
+
+__mysql_slow_query_log_location__
+
+This sets the location of the MySQL slow query log.
+
+default value : '/var/log/mysql/mysql-slow.log'
+
+__mysqL_long_query_time__
+
+The amount of time that a query must last before being logged into the slow query log.
+
+default value: 2
+
+mysql_log_queries_not_using_indexes
+
+Whether MySQL should also log any query that doesn't use indexes.
+
+default value: false
+
 ## SSH
 
 __ssh_port__
