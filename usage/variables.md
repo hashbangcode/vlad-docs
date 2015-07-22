@@ -55,7 +55,7 @@ default value: "./vlad_aux"
 
 __synced_folder_type__
 
-*Only applicable for when running VLAD on a non-Windows host.*
+*Only applicable for when running Vlad on a non-Windows host.*
 Use 'nfs' or 'rsync' for VM file editing in synced folder.
 
 default value: 'nfs'
@@ -200,13 +200,17 @@ Installs Xhprof and a Xhprof GUI.
 
 default value: false
 
-## Provision with custom role
+## Custom playbook
 
-__custom_provision__
+Vlad provides the following variables to help you integrate a custom playbook as part of provisioning.
 
-Run a custom role as part of provisioning. See [Custom roles](../usage/custom_roles.md) for more information.
+| Variable | Type | Default value | Description |
+|---|---|---|---|
+| `vlad_custom_play` | Boolean | false | Determines whether the custom playbook will run when Vlad provisions the VM. |
+| `vlad_custom_play_path` | String  | "../vlad_custom/" | Relative path to the directory that contains the custom playbook (relative to Vlad's Vagrantfile). Note the closing backslash. |
+| `vlad_custom_playfile`  | String | "provision.yml" | Name of the YAML file to run within the custom playbook (including extension). |
 
-default value: false
+See [Custom playbook](../usage/custom_playbook.md) for more information.
 
 ## HTTP ports
 
