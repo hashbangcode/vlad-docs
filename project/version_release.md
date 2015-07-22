@@ -2,7 +2,7 @@
 
 We may automate this in the future, but these are the tasks currently done when generating a new release of Vlad.
 
-- Bump version number in vlad/VERSION.txt
+- Bump version number in vlad_guts/VERSION.txt
 - Merge dev into master branch on vlad repo.
 - Tag master branch with new version number.
 - Go to github and update the version release with the change logs, these will be taken from the vlad docs changelog.

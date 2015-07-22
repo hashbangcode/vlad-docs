@@ -24,18 +24,18 @@ See [here](settings_file.md) for details. In short, it can be placed in differen
 If the directory doesn't exist when provisioning, Vlad will attempt to create it on the fly. The default value is "./docroot" which would produce a folder structure something like this:
 
 	demo-project/
-	├── vlad/
+	├── vlad_guts/
 	├── docroot/
 	├── Vagrantfile
 	└── and so on...
-	
+
 
 ### aux_synced_folder
 
 `aux_synced_folder` is a secondary Vagrant synced folder used to sync files that don't belong in `host_synced_folder`. If the directory doesn't exist when provisioning, Vlad will attempt to create it on the fly. The default value is "./vlad_aux" which would produce a folder structure something like this:
 
 	demo-project/
-	├── vlad/
+	├── vlad_guts/
 	├── vlad_aux/
 	├── Vagrantfile
 	└── and so on...
@@ -101,7 +101,7 @@ Comparatively, this is the most compromised setup on this list. This setup shoul
 
 	demo-project/
 	├── vlad/
-	│   ├── vlad/
+	│   ├── vlad_guts/
 	│   ├── ansible.cfg
 	│   ├── Vagrantfile
 	│   ├── README.md
@@ -150,7 +150,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 	├── .git/
 	├── .gitmodules
 	├── vlad/
-	│   ├── vlad/
+	│   ├── vlad_guts/
 	│   ├── ansible.cfg
 	│   ├── Vagrantfile
 	│   ├── README.md
@@ -196,7 +196,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 
 	demo-project/
 	├── vlad_aux/
-	├── vlad/
+	├── vlad_guts/
 	│   ├── settings.yml
 	│   └── [other vlad files...]
 	├── docroot/
@@ -237,7 +237,7 @@ This setup is far simpler than the preceding examples and involves simply nestin
 	demo-project/
 	├── .git/
 	├── vlad_aux/
-	├── vlad/
+	├── vlad_guts/
 	│   ├── settings.yml
 	│   └── [other vlad files...]
 	├── docroot/
@@ -265,6 +265,6 @@ This is another relatively simple setup that just involves nesting your Drupal c
 
 ### Cons
 
-- vlad/ & vlad_aux/ would need to be excluded from your Production environment creating a need for an alternative to `git push` for deployment.
+- vlad_guts/ & vlad_aux/ would need to be excluded from your Production environment creating a need for an alternative to `git push` for deployment.
 - Your .gitignore file would need to be amended to ignore certain files created when using Vlad (see Vlad's .gitignore file for pointers).
 - Vlad is detached from its GitHub repo and so future updates would have to be downloaded & applied manually.
