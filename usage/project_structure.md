@@ -219,7 +219,7 @@ This setup is far simpler than the preceding examples and involves simply nestin
 
 ### Pros
 
-- Simples.
+- Simple.
 - Allows for simple deployments via Git.
 
 
