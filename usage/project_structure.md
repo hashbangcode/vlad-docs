@@ -139,7 +139,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 ### Cons
 - Vlad settings are not stored in a Git repo.
 - 2 separate repos could be viewed as an unwanted complexity if you want your whole project _including Vlad_ to neatly exist in one ultra portable repo.
-
+- In order to run any Vagrant commands that pertain to the box you need to be within the `vlad` directory.
 
 ----
 
@@ -187,7 +187,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 ### Cons
 - Simple deployment via Git not possible due to local dev files (Vlad) being in main repo.
 - Git Submodules could be viewed as an unwanted complexity.
-
+- In order to run any Vagrant commands that pertain to the box you need to be within the `vlad` directory.
 
 ----
 
@@ -221,7 +221,7 @@ This setup is far simpler than the preceding examples and involves simply nestin
 
 - Simple.
 - Allows for simple deployments via Git.
-
+- Vagrant commands work from anywhere within the project structure.
 
 ### Cons
 
@@ -259,9 +259,9 @@ This is another relatively simple setup that just involves nesting your Drupal c
 
 ### Pros
 
-- Simples.
+- Simple.
 - Everything is in version control in a single repo (ultra portable).
-
+- Vagrant commands work from anywhere within the project structure.
 
 ### Cons
 
