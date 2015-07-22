@@ -1,5 +1,19 @@
 <h1>Change log</h1>
 
+## Version 1.1.4
+
+### BREAKING CHANGES
+- Changed the core 'vlad' directory to be called 'vlad_guts' (#258).
+
+### NON-BREAKING CHANGES
+- Fix for node directory not being accessable (#223).
+- Fix for DNS addresses not being resolved correctly (#252).
+- Moved Vagrant Cachier support from :machine to :box (#257).
+- Fix for vmware provisioning (pull request #256).
+- Correction of syntax in a Solr provisioning task (pull request #251).
+- Correction of typo in main Vlad index.php file.
+- Added MySQL slow query log support (#155).
+
 ## Version 1.1.3
 - Update of the Solr version to allow for the change in version on the Solr mirrors (#232).
 - Added fix to allow the Vlad user to have greater access over local databases (#230).
