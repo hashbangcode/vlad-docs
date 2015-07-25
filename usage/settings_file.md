@@ -9,6 +9,7 @@ Vlad is happy for you to store your settings in several possible locations (rela
 1. vlad_guts/settings.yml
 2. settings/vlad_settings.yml
 3. ../settings/vlad_settings.yml
+4. ../../settings/vlad_settings.yml
 
 This list is in order of precedence, if Vlad finds more than one file it will prefer the file nearest the top of the list.
 
@@ -21,6 +22,7 @@ Vlad's settings can be further overridden via an optional, additional "local" se
 1. vlad_guts/local_settings.yml
 2. settings/vlad_local_settings.yml
 3. ../settings/vlad_local_settings.yml
+4. ../../settings/vlad_local_settings.yml
 
 The local settings file will always be loaded last and provides a convenient means to make adjustments to your own environment that may be out of the scope of the project itself. For example:
 
