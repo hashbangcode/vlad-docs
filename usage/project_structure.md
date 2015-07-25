@@ -53,7 +53,7 @@ Vlad's codebase is [hosted on GitHub](https://github.com/hashbangcode/vlad) with
 
 The following example setups take different approaches and have their own pros & cons. This list is sorted with the most ideal setups nearer the top and the least ideal towards the bottom.
 
-Don't forget that these are just examples. Further setups are possible and may even be a better fit for you needs.
+Don't forget that these are just examples. Further setups are possible and may even be a better fit for your needs.
 
 
 ### [2 repos parallel](usage/project_structure/#example-setup-2-repos-parallel)
@@ -139,7 +139,7 @@ Because both Vlad and the Drupal codebase exist in separate repos Git can be use
 ### Cons
 - Vlad settings are not stored in a Git repo.
 - 2 separate repos could be viewed as an unwanted complexity if you want your whole project _including Vlad_ to neatly exist in one ultra portable repo.
-- In order to run any Vagrant commands that pertain to the box you need to be within the `vlad` directory.
+- Vagrant commands need to be run from within the `vlad` directory.
 
 ----
 
@@ -187,7 +187,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 ### Cons
 - Simple deployment via Git not possible due to local dev files (Vlad) being in main repo.
 - Git Submodules could be viewed as an unwanted complexity.
-- In order to run any Vagrant commands that pertain to the box you need to be within the `vlad` directory.
+- Vagrant commands need to be run from within the `vlad` directory.
 
 ----
 
