@@ -87,7 +87,7 @@ default value: false
 
 __vlad_custom_base_box_name__
 
-This sets the custom base box for Vlad to use when utilizing the custom base box functionality. This requires a custom base box to be setup or provided. [Please read the documentation on setting up the custom base box if you want to use this feature](usage/custom_box.md).
+This sets the custom base box for Vlad to use when utilizing the custom base box functionality. This requires a custom base box to be setup or provided. [Please read the documentation on setting up the custom base box if you want to use this feature](custom_box.md).
 
 default value: ""
 
