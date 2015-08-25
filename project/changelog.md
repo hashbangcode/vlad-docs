@@ -1,5 +1,18 @@
 <h1>Change log</h1>
 
+## Version 1.1.5 ##
+
+- Fixed #272: Sort git tags by version number, so drupal8_install.sh gets latest beta.
+- Fixed #269: "vlad_guts" yet to be fully rolled out in Vagrantfile.
+- Added the language-pack-en apt package in order to prevent a Ubuntu login issue where the system was complaining about the locale not being set.
+- Changed example.settings.yml into example.vlad_settings.yml and the custom settings.yml into vlad_settings.yml.
+- Found a small mistake in the tests on the web server setup (no port was present).
+- Merge pull request #264 from mvance/ruby-fix.
+- Fixed database import from file(s).
+- Added prerequisite packages for Ruby to install on Debian.
+- Drush alias functionality is now aware of recently added settings location.
+- Fixed ImageMagick tests.
+
 ## Version 1.1.4
 
 ### ✝ BREAKING CHANGES ✝
