@@ -12,3 +12,5 @@ The following describes how to setup the Vagrant box so that it can be used inst
 - Now run `vagrant up` to boot and provision your virtual machine using the custom box as a starting point. Vlad will still run the Ansible provisioning step but this will be mainly to verify the configuration.
 
 Once you have your custom base box you can give it to other members of your team. They'll need to run the `vagrant box add name_of_box /path/to/package.box` command but once done they will have the same setup as you and will be able to start working once they have launched the box. Although the provisioning step does run when the box launches it will only verify the configuration and as such will only take a fraction of the time than a normal Vlad provisioning run takes.
+
+Full Vagrant documentation for the `vagrant box` command can be found [here](https://docs.vagrantup.com/v2/cli/box.html).
