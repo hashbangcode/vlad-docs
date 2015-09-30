@@ -25,8 +25,8 @@ To start using custom playbooks just include the variable 'vlad_custom_play' in 
 
 You can run your custom playbook without Vagrant in the same way that you can with Vlad's main playbook. Just make sure you call the correct playbook (this command presumes that you're currently in the same directory as Vlad's Vagrantfile and that you're custom playbook is located at ../vlad_custom/provision.yml):
 
-    ansible-playbook -i vlad_guts/host.ini --private-key=~/.vagrant.d/insecure_private_key ../vlad_custom/provision.yml
+    ansible-playbook -i vlad_guts/host.ini --private-key=~/.vagrant.d/insecure_private_key -u vagrant ../vlad_custom/provision.yml
 
 Similarly, you can narrow the focus of this command to run only specific tags that you've defined within your custom playbook:
 
-    ansible-playbook -i vlad_guts/host.ini --private-key=~/.vagrant.d/insecure_private_key ../vlad_custom/provision.yml -t tag_1,tag_2
+    ansible-playbook -i vlad_guts/host.ini --private-key=~/.vagrant.d/insecure_private_key -u vagrant ../vlad_custom/provision.yml -t tag_1,tag_2
