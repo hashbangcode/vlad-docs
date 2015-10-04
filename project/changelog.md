@@ -1,5 +1,13 @@
 <h1>Change log</h1>
 
+## Version 1.1.6 ##
+- Bumped ansible-role-pantheon-cli version to 1.0.0.beta.2
+- Improving idempotency of base role, mysql role, and site playbook (pull reqest #282).
+- Correcting a bug in the location of the merged_settings_file that caused commands like "vagrant global-status --prune" to fail.
+- Updating the README.md file to add a dependencies section to make it easier to get Vlad installed (pull request #278).
+- Setting correct Centos apache restart handler in PHP role.
+- Updated the version number from 1.0-13 to 1.0-14 of the Centos IUS RPM PHP library.
+
 ## Version 1.1.5 ##
 
 - Fixed #272: Sort git tags by version number, so drupal8_install.sh gets latest beta.
