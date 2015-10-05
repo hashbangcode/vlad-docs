@@ -513,11 +513,26 @@ drush_keep_updated: no
 
 Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
 
-## Drush make
+## Drush extras
+
+### Additional Commands
+
+__drush_install_commands__
+
+Additional Drush commands to be installed.
+
+Default value:
+
+    drush_install_commands:
+      - { name: 'coder', version: '-7.x-2.x'}
+      - { name: 'site_audit', version: ''}
+      - { name: 'registry_rebuild', version: ''}
+
+### Drush make
 
 __drush_make_file__
 
-The name of the make file that is to be run. Vlad expects this file to be placed in a subdirectory called "make" within your vlad_aux directory.
+The name of a Drush make file that is to be run. Vlad expects this file to be placed in a subdirectory called "make" within your vlad_aux directory.
 
 E.g. "vlad_example_d7.make"
 
@@ -527,7 +542,7 @@ default value: ""
 
 __drush_make_options__
 
-Options to pass to drush make command.
+Options to pass to the `drush make` command when a file has been specified with `drush_make_file`.
 
 E.g. "--prepare-install"
 
@@ -540,6 +555,8 @@ __drush_make_force__
 Run drush make *every* time the VM is provisioned. Setting to false will only run drush make if a make file has been specified and docroot does not contain an existing Drupal codebase.
 
 default value: false
+
+### drushrc.php
 
 __drush_structure_tables__
 
