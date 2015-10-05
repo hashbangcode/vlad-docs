@@ -482,6 +482,37 @@ Sets the port Redis should listen on.
 
 default value: 6379
 
+## Drush
+
+*Hat tip: Vlad's installation of Drush is based largely on Jeff Geerling's [Ansible Role: Drush](https://github.com/geerlingguy/ansible-role-drush) but with minor tweaks. As such, the following variable documentation is respectfully "borrowed" from that role's README file and tweaked :)*
+
+Variables are listed below, along with default values:
+
+    drush_composer_path: /usr/local/bin/composer
+
+The location of Composer's installation.
+
+    drush_install_path: /usr/local/share/drush
+
+The location of the entire Drush installation (includes all the supporting files, as well as the `drush` executable file.
+
+    drush_path: /usr/local/bin/drush
+
+The path where Drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
+
+    drush_version: 7.0.0
+
+The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`). See Drush repo for options:
+
+ - https://github.com/drush-ops/drush/releases
+ - https://github.com/drush-ops/drush/branches
+
+```
+drush_keep_updated: no
+```
+
+Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
+
 ## Drush make
 
 __drush_make_file__
