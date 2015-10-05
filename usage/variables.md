@@ -515,7 +515,7 @@ Whether to keep Drush up-to-date with the latest revision of the branch specifie
 
 ## Drush extras
 
-### Additional Commands
+### Additional Drush commands
 
 __drush_install_commands__
 
