@@ -1,12 +1,30 @@
 <h1>Change log</h1>
 
 ## Version 1.1.6 ##
+
+### ✝ BREAKING CHANGES ✝
+
+- Vlad now always uses vlad_settings.yml instead of settings.yml (wherever it's located).
+- Vlad now always uses vlad_local_settings.yml instead of local_settings.yml (wherever it's located).
+
+### NON-BREAKING CHANGES
+
 - Bumped ansible-role-pantheon-cli version to 1.0.0.beta.2
 - Improving idempotency of base role, mysql role, and site playbook (pull reqest #282).
 - Correcting a bug in the location of the merged_settings_file that caused commands like "vagrant global-status --prune" to fail.
 - Updating the README.md file to add a dependencies section to make it easier to get Vlad installed (pull request #278).
 - Setting correct Centos apache restart handler in PHP role.
 - Updated the version number from 1.0-13 to 1.0-14 of the Centos IUS RPM PHP library.
+- Vlad now uses Ansible Galaxy roles (in part).
+- Added option to install AberdeenCloud Command Line Tools.
+- Added option to install Pantheon CLI (aka Terminus).
+- New variable `vlad_db_dump_on_halt_destroy` controls whether the database is dumped on `vagrant halt` and `vagrant destroy` (default behaviour unchanged).
+- Added options to automatically install a fresh copy of Drupal when provisioning. [Docs on new vars here](http://vlad-docs.readthedocs.org/en/latest/usage/variables/#drupal).
+- Revised Drush installation (you now pick your Drush version up front, Drush 8 now supported).
+- Project settings & local overrides now have an extra location that they can live in. See [Settings file](http://vlad-docs.readthedocs.org/en/latest/usage/settings_file/).
+- Fixed ImageMagick test.
+- Phing & PEAR no longer installed as part of Vlad.
+- Additional Drush commands can now be defined for installation. [New variable docs here](http://vlad-docs.readthedocs.org/en/latest/usage/variables/#drush-extras).
 
 ## Version 1.1.5 ##
 
