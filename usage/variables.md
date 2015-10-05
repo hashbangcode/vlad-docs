@@ -357,6 +357,12 @@ The password for the database user.
 
 default value: wibble
 
+__vlad_db_dump_on_halt_destroy__
+
+Whether to dump the database on `vagrant halt` and `vagrant destroy`.
+
+default value: true
+
 __db_import_up__
 
 Import MySQL databases from files on 'vagrant up'.
@@ -511,6 +517,29 @@ Sets the tables to be skipped in the "$options['structure-tables']['common']" co
     drush sql-dump --structure-tables-key=common --gzip --result-file=dump.sql
 
 default value: "['cache','cache_filter','cache_menu','cache_page','history','sessions','watchdog','cache_admin_menu','cache_block','cache_field','cache_form','cache_path','cache_token','cache_update','cache_views','cache_views_data','ctools_css_cache','ctools_object_cache','search_dataset','search_index','search_node_links','search_total']"
+
+## Drupal
+
+__vlad_drupal_install__
+
+Install a fresh copy of Drupal when provisioning.
+
+NOTE: Setting this to true will remove EVERYTHING inside docroot when run.
+
+Default value: false
+
+__vlad_drupal_install_version__
+
+Which version of Drupal to install. Available options:
+
+- `6`
+- `7`
+- `8`
+-  `8dev` (will include the relevant Git repo)
+
+`8` & `8dev` require Drush 8.
+
+Default value: 7
 
 ## Bling
 
