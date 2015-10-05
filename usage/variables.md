@@ -98,6 +98,12 @@ The server components that will be installed when the box is provisioned.
 - To install a component set it to true.
 - To leave a component out of the install set the value to false.
 
+__aberdeen_cli_install__
+
+Installs [AberdeenCloud Command Line Tools](http://www.aberdeencloud.com/docs/guides/command-line-tools)
+
+default value: false
+
 __adminer_install__
 
 Installs Adminer.
@@ -149,6 +155,12 @@ default value: true
 __node_install__
 
 Installs Node.
+
+default value: false
+
+__pantheon_cli_install__
+
+Installs [Pantheon CLI](https://github.com/pantheon-systems/cli) (aka Terminus).
 
 default value: false
 
