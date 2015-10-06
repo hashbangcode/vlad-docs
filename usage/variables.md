@@ -2,6 +2,8 @@
 
 The following variables can be set in Vlad's [settings file](settings_file.md).
 
+Please note that this is not the full list of variables available through Vlad. Though this list is currently the majority of what's available, it is only the variables that Vlad defines itself. Through the use of Ansible Galaxy roles Vlad makes use of other projects that can provide their own additional variables. More info [here](galaxy_roles.md).
+
 ## Webserver
 
 __webserver_hostname__
