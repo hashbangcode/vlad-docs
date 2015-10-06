@@ -51,7 +51,7 @@ Vlad includes the following technologies:
 - Varnish
 - Git
 - Drush
-- Drush extensions: Site Audit & Registry Rebuild
+- Drush commands: Coder, Site Audit & Registry Rebuild
 - Munin
 - Xdebug
 - Ruby
@@ -65,6 +65,8 @@ Vlad includes the following technologies:
 - Node.js
 - ImageMagick
 - PimpMyLog
+- AberdeenCloud Command Line Tools
+- Pantheon CLI (aka Terminus)
 
 Many of these items can be turned on and off via a settings file.
 
