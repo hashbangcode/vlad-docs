@@ -33,7 +33,7 @@ pages:
 - ['applications/munin.md', 'Applications', 'Munin']
 
 - ['contributing/contributing.md', 'Contributing']
-- ['contributing/submitting_patches.md', 'Contributing', 'Submitting Patches']
+- ['contributing/submitting_patches.md', 'Contributing', 'Submitting patches']
 - ['contributing/naming_convention.md', 'Contributing', 'Task naming convention']
 - ['contributing/submitting_issues.md', 'Contributing', 'Submitting issues']
 - ['contributing/order_convention.md', 'Contributing', 'Task attribute order convention']
@@ -46,4 +46,4 @@ pages:
 - ['project/thanks.md', 'Project', 'Thanks']
 - ['project/changelog.md', 'Project', 'Change log']
 - ['project/licence.md', 'Project', 'Licence']
-- ['project/version_release.md', 'Project', 'Version Release']
+- ['project/version_release.md', 'Project', 'Version release']
