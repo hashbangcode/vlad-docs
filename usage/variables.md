@@ -218,7 +218,7 @@ default value: false
 
 Vlad allows you to specify a Pantheon environment and site to import when first setting up the VM. You can import code,
 database, and file backups. by default, the latter two are imported when you have enabled importing. Set
-`pantheon_import_site_include_code` to `true` to import the codebase to Vlad's `docroot` as well.
+`vlad_pantheon_import_site_include_code` to `true` to import the codebase to Vlad's `docroot` as well.
 
 
 To protect your data, these won't be automatically imported more than once. To import again simply remove the relevant
@@ -227,46 +227,46 @@ file from last time:
     - vlad_aux/pantheon_import_site_files.tar.gz # To re-import files
     - docroot # To import or re-import code
     
-__pantheon_import_site__
+__vlad_pantheon_import_site__
 
 Whether to import a site from Pantheon when provisioning the Vlad VM.
 
 default value: false
 
-__pantheon_import_site_email__
+__vlad_pantheon_import_site_email__
 
 The email you use to log into Pantheon. Needed for Pantheon CLI login.
 
 default value: ''
 
-__pantheon_import_site_password__
+__vlad_pantheon_import_site_password__
 
 The password you use to log into Pantheon. Needed for Pantheon CLI login (sorry, they don't give us any better way to
 do this yet).
 
 default value: ''
 
-__pantheon_import_site_site__
+__vlad_pantheon_import_site_site__
 
 The ID of the site (viewable on your dashboard) of the site whose code, files, and DB will be imported when you
 provision the VM.
 
 default value: ''
 
-__pantheon_import_site_env__
+__vlad_pantheon_import_site_env__
 
 The env to import.
 
 default value: ''
 
-__pantheon_import_site_include_code__
+__vlad_pantheon_import_site_include_code__
 
 Whether to import the Pantheon Site codebase (from latest backup; if you want to import it from Git, do that manually
 before running `vagrant up`).
 
 default value: false
 
-__pantheon_import_site_include_db__
+__vlad_pantheon_import_site_include_db__
 
 Whether to import the Pantheon Site database (from latest backup).
 
@@ -276,7 +276,7 @@ either set `db_import_up` to `true` or, if importing several, set the first impo
 
 default value: true
 
-__pantheon_import_site_include_files__
+__vlad_pantheon_import_site_include_files__
 
 Whether to import the Pantheon Site files (from latest backup).
 
