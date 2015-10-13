@@ -639,6 +639,20 @@ Setting to false will copy alias/aliases files to the guest without assembling o
 
 default value: false
 
+__vlad_private_files_dir__
+
+Create a directory within vlad_aux for Drupal to use for private files storage.
+
+Note that this option simply ensures that the directory is present, it does not attempt to configure your Drupal site.
+
+Accepted values:
+
+- `false`: no directory created
+- `true`: creates vlad_aux/private
+- `string`: creates vlad_aux/`string`
+
+Default vlaue: `false`
+
 ## Git config user credentials
 
 Leave these variables empty to skip this step.
