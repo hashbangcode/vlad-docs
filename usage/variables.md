@@ -226,12 +226,16 @@ Vlad allows you to specify a Pantheon environment and site to import when first 
 database, and file backups. by default, the latter two are imported when you have enabled importing. Set
 `vlad_pantheon_import_site_include_code` to `true` to import the codebase to Vlad's `docroot` as well.
 
-
-To protect your data, these won't be automatically imported more than once. To import again simply remove the relevant
+To protect your data, these won't be automatically imported more than once. To import again simply rename (or remove) the relevant
 file from last time:
-    - vlad_aux/pantheon_import_site_database.sql.gz # To re-import the DB
-    - vlad_aux/pantheon_import_site_files.tar.gz # To re-import files
-    - docroot # To import or re-import code
+    - `vlad_aux/pantheon_import_size.sql.gz # To re-import the DB.`
+    - `vlad_aux/pantheon_import_site_files.tar.gz # To re-import files.`
+    - `docroot # To import or re-import code`
+
+When re-importing, back up your previous database first if there's anything you might want to keep. To back up your files, simply move the files directory out of your Drupal site so it won't be overwritten.
+
+This does not guarantee the site will automatically work; you may need to create a local
+settings file for that and point to the `vladdb` database.
     
 __vlad_pantheon_import_site__
 
@@ -265,13 +269,6 @@ The env to import.
 
 default value: ''
 
-__vlad_pantheon_import_site_include_code__
-
-Whether to import the Pantheon Site codebase (from latest backup; if you want to import it from Git, do that manually
-before running `vagrant up`).
-
-default value: false
-
 __vlad_pantheon_import_site_include_db__
 
 Whether to import the Pantheon Site database (from latest backup).
@@ -285,6 +282,8 @@ default value: true
 __vlad_pantheon_import_site_include_files__
 
 Whether to import the Pantheon Site files (from latest backup).
+
+For this to work, you have to have at least a `docroot/sites/default` folder.
 
 default value: true
 
