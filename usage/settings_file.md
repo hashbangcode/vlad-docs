@@ -6,7 +6,7 @@ Variables can be set in Vlad's settings file to alter how you'd like your VM to 
 
 Vlad is happy for you to store your settings in several possible locations (relative to Vlad's `Vagrantfile`):
 
-1. vlad_guts/settings.yml
+1. vlad_guts/vlad_settings.yml
 2. settings/vlad_settings.yml
 3. ../settings/vlad_settings.yml
 4. ../../settings/vlad_settings.yml
