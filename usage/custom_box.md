@@ -1,6 +1,6 @@
 <h1>Custom Base Box</h1>
 
-The following describes how to setup the Vagrant box so that it can be used instead of the normal Ubuntu/Centos boxes that get downloaded when running Vlad.
+The following describes how to setup the Vagrant box so that it can be used instead of the normal Ubuntu/CentOS boxes that get downloaded when running Vlad.
 
 - Provision a Vlad virtual machine as per normal.
 - Run `vagrant package`. This will halt the virtual machine and create a file named "package.box" in the current directory.

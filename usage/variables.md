@@ -35,9 +35,9 @@ default value: "vlad"
 
 __vlad_os__
 
-The OS that vlad will use. This can be one of the following:
+The OS that Vlad will use. This can be one of the following:
 
-- "centos65"
+- "centos67"
 - "ubuntu12"
 - "ubuntu14"
 
