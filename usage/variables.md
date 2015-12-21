@@ -486,34 +486,47 @@ default value: 6379
 
 ## Drush
 
-*Hat tip: Vlad's installation of Drush is based largely on Jeff Geerling's [Ansible Role: Drush](https://github.com/geerlingguy/ansible-role-drush) but with minor tweaks. As such, the following variable documentation is respectfully "borrowed" from that role's README file and tweaked :)*
+__drush_version__
 
-Variables are listed below, along with default values:
+The version of Drush to install. Can be a release tag or a branch name. See the Drush GitHub repo for options:
 
-    drush_composer_path: /usr/local/bin/composer
+ - [Drush releases](https://github.com/drush-ops/drush/releases)
+ - [Drush branches](https://github.com/drush-ops/drush/branches)
 
-The location of Composer's installation.
+Examples:
 
-    drush_install_path: /usr/local/share/drush
+- `7.x`
+- `master`
+- `8.0.0`
+
+default: 8.0.1
+
+__drush_prefer_packaged_download__
+
+Whether to download drush as a packaged .phar file (faster) or clone the repo and install via Composer.
+
+__NOTE__: if `drush_prefer_packaged_download` is set to `true`, `drush_version` will ideally need to be set to a release tag equal to or higher than `8.0.0` (packaged downloads are only available for more recent versions). If this condition is not met, Vlad will defer to cloning the repo and installing via Composer.
+
+default: true
+
+__drush_install_path__
 
 The location of the entire Drush installation (includes all the supporting files, as well as the `drush` executable file.
 
-    drush_path: /usr/local/bin/drush
+default: /usr/local/share/drush
 
-The path where Drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
+__drush_path__
 
-    drush_version: 7.0.0
+The path where Drush will be installed and available to your system.
 
-The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`). See Drush repo for options:
+default: /usr/local/bin/drush
 
- - https://github.com/drush-ops/drush/releases
- - https://github.com/drush-ops/drush/branches
+__drush_keep_updated__
 
-```
-drush_keep_updated: no
-```
+Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`. Only applies if `drush_prefer_packaged_download` is set to `false` or `drush_version` is not set to a release tag greater or equal to `8.0.0`.
 
-Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
+default: no
+
 
 ## Drush extras
 
