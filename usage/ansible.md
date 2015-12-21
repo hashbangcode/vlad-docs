@@ -14,7 +14,7 @@ Tags have been included in the playbooks to allow groups of tasks to be run in i
 
 Possible tags are as follows:
 
-    adminer,apache,apache2,aptget,bling,composer,drupal_install,drush,drush_aliases,drush_make,git,imagemagick,mailcatcher,memcached,munin,mysql,mysql_import,node,pear,phing,php,pimpmylog,python,redis,ruby,samba,sendmail,solr,ssh,test,varnish,windows,xdebug,xhprof,yum
+    adminer,apache,apache2,aptget,bling,composer,drupal_install,drush,drush_aliases,drush_make,git,imagemagick,mailcatcher,memcached,munin,mysql,mysql_import,node,pantheon_import,pear,phing,php,pimpmylog,python,redis,ruby,samba,sendmail,solr,ssh,test,varnish,windows,xdebug,xhprof,yum
 
 It is also possible to use a inline inventory syntax with the ansible-playbook command. The following is the same command as above, but in this case it doesn't use the host.ini file and instead uses the inline inventory flag.
 

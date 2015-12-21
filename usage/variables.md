@@ -214,6 +214,73 @@ Installs Xhprof and a Xhprof GUI.
 
 default value: false
 
+## Importing a Pantheon site
+
+Vlad allows you to specify a Pantheon environment and site to import when first setting up the VM. You can import code,
+database, and file backups. by default, the latter two are imported when you have enabled importing. Set
+`vlad_pantheon_import_include_code` to `true` to import the codebase to Vlad's `docroot` as well.
+
+To protect your data, these won't be automatically imported more than once. To import again simply rename (or remove) the relevant
+file from last time:
+    - `vlad_aux/pantheon_import.sql.gz # To re-import the DB.`
+    - `vlad_aux/pantheon_import_files.tar.gz # To re-import files.`
+    - `docroot # To import or re-import code`
+
+When re-importing, back up your previous database first if there's anything you might want to keep. To back up your files, simply move the files directory out of your Drupal site so it won't be overwritten.
+
+This does not guarantee the site will automatically work; you may need to create a local
+settings file for that and point to the `vladdb` database.
+    
+__vlad_pantheon_import__
+
+Whether to import a site from Pantheon when provisioning the Vlad VM.
+
+default value: false
+
+__vlad_pantheon_import_email__
+
+The email you use to log into Pantheon. Needed for Pantheon CLI login.
+
+default value: ''
+
+__vlad_pantheon_import_password__
+
+The password you use to log into Pantheon. Needed for Pantheon CLI login (sorry, they don't give us any better way to
+do this yet).
+
+default value: ''
+
+__vlad_pantheon_import__
+
+The ID of the site (viewable on your dashboard) of the site whose code, files, and DB will be imported when you
+provision the VM.
+
+default value: ''
+
+__vlad_pantheon_import_env__
+
+The env to import.
+
+default value: ''
+
+__vlad_pantheon_import_include_db__
+
+Whether to import the Pantheon Site database (from latest backup).
+
+NOTE: In order for this database to get imported to your Vlad VM, you have to name your first database `vladdb` and
+either set `db_import_up` to `true` or, if importing several, set the first import file to
+`vlad_aux/db_io/halt_destroy/vladdb.sql.gz`.
+
+default value: true
+
+__vlad_pantheon_import_include_files__
+
+Whether to import the Pantheon Site files (from latest backup).
+
+For this to work, you have to have at least a `docroot/sites/default` folder.
+
+default value: true
+
 ## Custom playbook
 
 Vlad provides the following variables to help you integrate a custom playbook as part of provisioning.
