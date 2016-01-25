@@ -230,7 +230,7 @@ When re-importing, back up your previous database first if there's anything you 
 
 This does not guarantee the site will automatically work; you may need to create a local
 settings file for that and point to the `vladdb` database.
-    
+
 __vlad_pantheon_import__
 
 Whether to import a site from Pantheon when provisioning the Vlad VM.
@@ -708,16 +708,6 @@ __add_index_file__
 Add the default index.php file (useful to turn off if you are going git clone into the web root folder). Vlad will also not overwrite any existing index.php file present in the docroot location.
 
 default value: true
-
-__drush_aliases_assemble__
-
-Drush alias files can be placed in either of Vlad's settings directories. See http://vlad-docs.readthedocs.org/en/latest/usage/settings_file
-
-Setting to true will assemble all alias/aliases files into a single group aliases file prefixed with the boxname.
-
-Setting to false will copy alias/aliases files to the guest without assembling or renaming.
-
-default value: false
 
 __vlad_private_files_dir__
 
