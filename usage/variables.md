@@ -214,6 +214,12 @@ Installs Xhprof and a Xhprof GUI.
 
 default value: false
 
+__vlad_debug__
+
+Print out all available variables to a file called 'ansible.all'.
+
+default value: false
+
 ## Importing a Pantheon site
 
 Vlad allows you to specify a Pantheon environment and site to import when first setting up the VM. You can import code,
@@ -721,7 +727,14 @@ Accepted values:
 - `true`: creates vlad_aux/private
 - `string`: creates vlad_aux/`string`
 
-Default vlaue: `false`
+Default value: `false`
+
+__vlad_extra_packages__
+
+A list that allows users to install extra packages along with the current box. This is merged at runtime with vlad_yum_packages for Centos systems and vlad_apt_packages for Ubuntu systems.
+
+Default value:
+ - curl
 
 ## Git config user credentials
 
