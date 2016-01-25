@@ -197,7 +197,7 @@ Deployment via Git could be made more complex using this setup as files & direct
 	demo-project/
 	├── vlad_aux/
 	├── vlad_guts/
-	│   ├── settings.yml
+	│   ├── vlad_settings.yml
 	│   └── [other vlad files...]
 	├── docroot/
 	│   ├── [drupal codebase...]
@@ -238,7 +238,7 @@ This setup is far simpler than the preceding examples and involves simply nestin
 	├── .git/
 	├── vlad_aux/
 	├── vlad_guts/
-	│   ├── settings.yml
+	│   ├── vlad_settings.yml
 	│   └── [other vlad files...]
 	├── docroot/
 	│   └── [drupal codebase...]
