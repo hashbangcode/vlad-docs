@@ -721,16 +721,6 @@ Add the default index.php file (useful to turn off if you are going git clone in
 
 default value: true
 
-__drush_aliases_assemble__
-
-Drush alias files can be placed in either of Vlad's settings directories. See http://vlad-docs.readthedocs.org/en/latest/usage/settings_file
-
-Setting to true will assemble all alias/aliases files into a single group aliases file prefixed with the boxname.
-
-Setting to false will copy alias/aliases files to the guest without assembling or renaming.
-
-default value: false
-
 __vlad_private_files_dir__
 
 Create a directory within vlad_aux for Drupal to use for private files storage.
