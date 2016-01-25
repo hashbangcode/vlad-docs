@@ -236,7 +236,7 @@ When re-importing, back up your previous database first if there's anything you 
 
 This does not guarantee the site will automatically work; you may need to create a local
 settings file for that and point to the `vladdb` database.
-    
+
 __vlad_pantheon_import__
 
 Whether to import a site from Pantheon when provisioning the Vlad VM.
@@ -737,7 +737,14 @@ Accepted values:
 - `true`: creates vlad_aux/private
 - `string`: creates vlad_aux/`string`
 
-Default vlaue: `false`
+Default value: `false`
+
+__vlad_extra_packages__
+
+A list that allows users to install extra packages along with the current box. This is merged at runtime with vlad_yum_packages for Centos systems and vlad_apt_packages for Ubuntu systems. 
+
+Default value:
+ - curl
 
 ## Git config user credentials
 
