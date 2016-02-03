@@ -5,6 +5,7 @@ Most of Vlad's current functionality resides within Vlad's own codebase. The res
 ## Links to Ansible Galaxy roles used by Vlad
 
 - ### [AberdeenCloud Command Line Tools](https://github.com/hashbangcode/ansible-role-aberdeencloud-cli)
+- ### [Drush](https://github.com/hashbangcode/ansible-role-drush)
 - ### [ImageMagick](https://github.com/hashbangcode/ansible-role-imagemagick)
 - ### [Pantheon CLI](https://github.com/hashbangcode/ansible-role-pantheon-cli)
 - ### [Sendmail](https://github.com/hashbangcode/ansible-role-sendmail)
