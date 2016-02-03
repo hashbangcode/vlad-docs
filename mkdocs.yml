@@ -15,7 +15,6 @@ pages:
 - ['usage/ansible.md', 'Usage', 'Ansible']
 - ['usage/custom_box.md', 'Usage', 'Custom base box']
 - ['usage/custom_playbook.md', 'Usage', 'Custom playbook']
-- ['usage/example_vlad_output.md', 'Usage', 'Example Vlad output']
 - ['usage/galaxy_roles.md', 'Usage', 'Ansible Galaxy roles']
 - ['usage/project_structure.md', 'Usage', 'Project structure']
 - ['usage/documentation.md', 'Usage', 'Documentation']
