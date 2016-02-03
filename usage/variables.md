@@ -559,46 +559,31 @@ default value: 6379
 
 ## Drush
 
-__drush_version__
+    drush_install_path: /usr/local/share/drush
 
-The version of Drush to install. Can be a release tag or a branch name. See the Drush GitHub repo for options:
+The location of the entire drush installation (includes all the supporting files, as well as the drush executable file.
 
- - [Drush releases](https://github.com/drush-ops/drush/releases)
- - [Drush branches](https://github.com/drush-ops/drush/branches)
+    drush_path: /usr/local/bin/drush
 
-Examples:
+The path where drush will be installed and available to your system. Should be in your user's $PATH so you can run commands simply with `drush` instead of the full path.
 
-- `7.x`
-- `master`
-- `8.0.0`
+    drush_version: 8.0.1
 
-default: 8.0.1
+The version of Drush to install (examples: "master" for the bleeding edge, "7.x", "6.x", "6.2.0"). This should be a string as it refers to a git branch, tag, or commit hash.
 
-__drush_prefer_packaged_download__
+    drush_prefer_packaged_download: true
 
-Whether to download drush as a packaged .phar file (faster) or clone the repo and install via Composer.
+If set to `true`, the role will attempt to install Drush from a downloaded .phar file. Note that .phar files are only available through later releases of Drush and will require `drush_version` to be set to `8.0.0-rc3` or higher.
 
-__NOTE__: if `drush_prefer_packaged_download` is set to `true`, `drush_version` will ideally need to be set to a release tag equal to or higher than `8.0.0` (packaged downloads are only available for more recent versions). If this condition is not met, Vlad will defer to cloning the repo and installing via Composer.
+### The following variables only apply to installation via Composer
 
-default: true
+    drush_composer_path: /usr/local/bin/composer
 
-__drush_install_path__
+Path to where Composer is installed.
 
-The location of the entire Drush installation (includes all the supporting files, as well as the `drush` executable file.
+    drush_keep_updated: no
 
-default: /usr/local/share/drush
-
-__drush_path__
-
-The path where Drush will be installed and available to your system.
-
-default: /usr/local/bin/drush
-
-__drush_keep_updated__
-
-Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`. Only applies if `drush_prefer_packaged_download` is set to `false` or `drush_version` is not set to a release tag greater or equal to `8.0.0`.
-
-default: no
+Whether to keep Drush up-to-date with the latest revision of the branch specified by drush_version.
 
 
 ## Drush extras
