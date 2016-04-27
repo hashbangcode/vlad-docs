@@ -1,5 +1,76 @@
 <h1>Change log</h1>
 
+## Version 1.1.7 ##
+
+### ✝ BREAKING CHANGES ✝
+- Vlad no longer handles Drush site aliases (add aliases via your site codebase or via a custom playbook).
+- The .vagrant directory is now placed beside vlad_settings.yml
+- Updated from CentOS 6.6 to 6.7 (vlad_os will now expect a value of "centos67")
+- Now using "bento" base boxes for all operating systems & providers.
+
+### NON-BREAKING CHANGES
+
+- Tweaked defaults as discussed in #345
+- Shell prompt: allow force copying of .bash_prompt + housekeeping
+- Merge pull request #346 from christopher-hopper/feature/git-drush-bash-prompt
+- Turn-off git upstream checks in bling bash prompt.
+- Return cross symbol to bling bash prompt.
+- Show hostname in bling bash prompt title bar
+- Whitespace and line endings for bling bash prompt
+- Return Apotropaic properties to bash prompt
+- Configure and enable improved bash prompt
+- Enable drush bash completion and prompt for all
+- Move dev branch info to CONTRIBUTING Issues heading
+- Use named anchor for issues in Contributing guide
+- Add Github contribution guidelines file
+- Added leading zero to octal file permission.
+- Travis now lints site.yml playbook again.
+- Refactored use of Ansible `sudo` to `become`.
+- Added a Vlad debug role to aid with testing and development.
+- reverting a small change in the version file retrieval, now using the indentory_dir ansible variable
+- minor cleanup from #333 / #324
+- fix #335 - suppress re-initialize output noise
+- Drush role now lives in Ansible Galaxy
+- Merge pull request #333 from wizonesolutions/fix-local_inventory_dir
+- Use an extra var for inventory directory.
+- Added in variable and option to select optional packages to install (as per issue #205)
+- Removed the "resume" trigger from the vagrant triggers as this isn't needed really (fixing issue #329)
+- Removed another whitespace character in the example settings file that could cause a syntax error if left in there
+- Removed the whitespace from in front of the variables in the example settings file
+- Removed an instance of duplicate variable (vm_cpus and vm_membory)
+- Fix #324 set fallback value for inventory_dir
+- Removed a syntax error from the local_up_services.yml file (duplicate command on a task)
+- Fix issue #324 by using the inventory_dir variable instead of a relative reference to the file in the host.ini file creation and the Vlad version lookup
+- Vagrantfile comment house keeping.
+- Merge pull request #317 from zxaos/308-unify-base-boxes
+- Merge pull request #312 from zxaos/253-move-vagrant-dir
+- Merge pull request #320 from zxaos/266-remove-ansible-ssh-key
+- Remove ansible ssh key config in default ansible settings
+- Add libselinux-python to centos build
+- Added support to install Drush from packaged file download
+- Pantheon_import_site is now pantheon_import
+- Merge pull request #311 from zxaos/update-example-settings
+- Fixed/updated D8 (stable) install script
+- Added a task to the base role to setup the guest machines /etc/hosts file with the currently defined local urls (as per issue #298)
+- Merge pull request #306 from mvance/innodb_import_performance
+- Adding options to allow for better innodb import performance.
+- Merge pull request #303 from wizonesolutions/bug-fix-pantheon
+- Merge pull request #300 from mvance/ruby_install_fix
+- Now using ansible-role-pantheon-cli 1.0.0.beta.3
+- Resolving issue #295 by installing Ruby earlier.
+- Merge pull request #292 from wizonesolutions/feature-pantheon-import
+- Add support for importing Pantheon sites.
+- Solr is now managed by a Galaxy Role
+- Initial run of drush now with sudo to allow drush 6.x to resolve dependencies
+- Merge pull request #286 from zxaos/dev
+- Settings can now be stored at [greatgrandparent_directory]/settings/
+- Created a composer.json file for integration with composer packages and packagist.org
+- Added option to create a private files directory in vlad_aux on provision
+- Some tweaks to the .gitignore file to remove some over zealous file exclusion rules
+- Added PECL extension for Redis to Redis task (enhancement #275)
+- Added versions into the tomcat and solr requirements.yml file, also added the tomcat role into the site.yml provisioning file
+- Some other smaller comments, documentation, housekeeping, formatting and idempotency changes.
+
 ## Version 1.1.6 ##
 
 ### ✝ BREAKING CHANGES ✝

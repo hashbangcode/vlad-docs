@@ -166,12 +166,6 @@ Installs [Pantheon CLI](https://github.com/pantheon-systems/cli) (aka Terminus).
 
 default value: false
 
-__platformsh_cli_install__
-
-Installs the [Platform.sh CLI](https://github.com/platformsh/platformsh-cli).
-
-default value: false
-
 __php_install__
 
 Installs PHP, including a number of PHP packages as well as APC, Composer, and Xdebug.
