@@ -81,6 +81,17 @@ Amount of memory to be allocated to the guest VM from the host machine. This can
 
 default value: '1024'
 
+__vlad_parallels_longer_battery_life__
+
+Adjusts the "Optimization" > "Power" setting within a Parallels VM's own settings:
+
+- `"off"` equates to "Better performance"
+- `"on"` equates to "Longer battery life"
+
+The value must be surrounded by quotes.
+
+default value: `"off"`
+
 __parallels_update_guest_tools__
 
 Whether the `vagrant-parallels` plugin should update the Guest Tools in the VM automatically.
