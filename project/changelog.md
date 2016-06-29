@@ -1,5 +1,9 @@
 <h1>Change log</h1>
 
+## Version 1.1.8 ##
+- Update of some tasks in Vlad to allow a full test build inside Travis.
+- Updated the Solr role version to allow for path fix. 
+
 ## Version 1.1.7 ##
 
 ### ✝ BREAKING CHANGES ✝
