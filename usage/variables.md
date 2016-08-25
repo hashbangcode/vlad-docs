@@ -273,9 +273,9 @@ do this yet).
 
 default value: ''
 
-__vlad_pantheon_import__
+__vlad_pantheon_import_site__
 
-The ID of the site (viewable on your dashboard) of the site whose code, files, and DB will be imported when you
+The alphanumeric ID of the site (viewable on your dashboard url) of the site whose code, files, and DB will be imported when you
 provision the VM.
 
 default value: ''
