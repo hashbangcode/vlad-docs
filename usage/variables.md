@@ -62,6 +62,12 @@ Use 'nfs' or 'rsync' for VM file editing in synced folder.
 
 default value: 'nfs'
 
+__vlad_synced_folder_mount_options__
+
+Set additional mount options for the Vagrant mounts.
+
+default value: [] (i.e. a blank array).
+
 __ansible_verbosity__
 
 Set the level of verbosity that Ansible will use.
