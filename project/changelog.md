@@ -1,8 +1,23 @@
 <h1>Change log</h1>
 
+## Version 1.2.0 ##
+- Modified the vlad-play.sh and vlad-play-internal.sh script files to accept a user parameter as -u as well a tags parameter (-t).
+- Some commits to fix the Travis build process.
+- Added the vlad_synced_folder_mount_options variable in order to allow for parameters to be passed to the NFS creation.
+- Added Ubuntu 16.04 and Centos 7.
+- Added option for PHP 7 and 7.1.
+- Removed suppoert for Ubuntu 12.
+- Fix for variable syntax in Ansible 2.
+- Added Drupal console back into the default build of Vlad.
+- Setting the max version of ansible required to 2.1.
+- Fixing xhprof install, also added SSL profiling.
+- Removed aberdeencloud cli role.
+- Some minor syntax changes and code tidy up.
+- Thanks to wizonesolutions for providing many of the fixes in this version!
+
 ## Version 1.1.8 ##
 - Update of some tasks in Vlad to allow a full test build inside Travis.
-- Updated the Solr role version to allow for path fix. 
+- Updated the Solr role version to allow for path fix.
 
 ## Version 1.1.7 ##
 
